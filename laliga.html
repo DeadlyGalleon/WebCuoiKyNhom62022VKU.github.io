@@ -1,0 +1,1077 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Liga</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jQuerry.js">
+    <link rel="stylesheet" href="script.js">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+ 
+</head>
+<style>
+ 
+   .bordered {
+ border: 1px solid black;
+}
+
+/* CSS cho việc ẩn các đường kẻ trong responsive layout */
+@media (max-width: 768px) {
+ .bordered {
+   border: none;
+ }
+}
+</style>
+<body class="custom-bgbody">
+  <nav id="navbar" class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="navbar-brand-wrapper d-flex">
+        <button id="toggleSidebarBtn" class="navbar-toggler navbar-toggler-left" type="button" aria-expanded="false" aria-label="">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="">
+            <img src="images/logowweb.png" alt="Logo" width="60px" height="60px" class="img-fluid">
+            <span class="fs-1 p-4" style="color: white;">Football News</span>
+        </a>
+
+    </div>
+
+    
+</nav>
+
+
+
+
+  
+<div class="sidebar" id="sidebar">
+   
+  <ul class="navbar-nav">
+      <center>
+    <li class="nav-item">
+    
+      <a class="nav-link" href="index.html">Trang chủ</a>
+
+    </li>
+  </center>   
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="epl.html">Premier League</a>
+    </li>
+  </center>   
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="laliga.html">LaLiga</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="L1.html">Ligue1</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="seriea.html">Serie A</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="L1.html">Bundesliga</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="Login.html">Đăng Nhập</a>
+    </li>
+  </center>
+  </ul>
+
+  <div class="sidebar" id="sidebar">
+   
+    <ul class="navbar-nav">
+        <center>
+      <li class="nav-item">
+      
+        <a class="nav-link" href="index.html">Trang chủ</a>
+ 
+      </li>
+    </center>   
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="epl.html">Premier League</a>
+      </li>
+    </center>   
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="laliga.html">LaLiga</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="L1.html">Ligue1</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="seriea.html">Serie A</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="bundes.html">Bundesliga</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="Login.html">Đăng Nhập</a>
+      </li>
+    </center>
+    </ul>
+  </div>
+
+
+
+<div class="content mt-2">
+    
+
+  
+  <div class="container mt-12 custom-bglogogiaidaullg">
+    <nav class="header">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-1">
+          <center><img src="https://assets.laliga.com/assets/logos/laliga-h-negativo/laliga-h-negativo-1200x1200.png" width="100" height="100" alt="logo"></center>
+        </div>
+        <div class="col-12 col-md-11 text-center">
+          <h1 class="display-3 fw-bolder" style="font-family: PremierSans-Heavy,Arial,Helvetica Neue,Helvetica,sans-serif; color: white;"></h1>
+        </div>
+      </div>
+    </nav>  
+  </div>
+  
+    <div class="container mt-3 "  >
+        <table class="tbl-rank table table-rounded">
+            <thead class="bg-light">
+                <tr >
+                    <th><span class="team-name">Hạng</span>
+                      <span class="team-name-abbreviation">H</span></th>
+                    <th><span class="team-name">Đội</span>
+                      <span class="team-name-abbreviation">Đ</span></th>
+                    <th class="text-center"><span class="team-name">Trận đã thi đấu</span>
+                      <span class="team-name-abbreviation">Tr</span></th>
+                    <th class="text-center"><span class="team-name">Win</span>
+                      <span class="team-name-abbreviation">W</span></th>
+                    <th class="text-center"><span class="team-name">Hòa</span>
+                      <span class="team-name-abbreviation">H</span></th>
+                    <th class="text-center"><span class="team-name">Loss</span>
+                      <span class="team-name-abbreviation">L</span></th>
+                    <th class="text-center"><span class="team-name">Goal</span>
+                        <span class="team-name-abbreviation">G</span></th>
+                    <th class="text-center"><span class="team-name">Điểm</span>
+                      <span class="team-name-abbreviation">Đ</span</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white table-group-divider">
+                <tr class="table-success">
+                    <td style="position: relative; padding-left: 20px;">
+                      <span class="value" >1</span>
+                      <span class="status status-dot"></span>
+                    </td>
+                    <td>
+                        <img class="logo-rank" src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" alt="">
+                        <span class="team-name">barcelona</span>
+                        <span class="team-name-abbreviation">BAR</span>
+                    </td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">28</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">70:20</td>
+                    <td class="text-center">88</td>   
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >2</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td>
+                        <img src="https://static.flashscore.com/res/image/data/CGPhnpne-4CIh5uRh.png" alt="">
+                        <span class="team-name">Real Mardrid</span>
+                        <span class="team-name-abbreviation">RMA</span>
+                    </td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">24</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">75:36</td>
+                    <td class="text-center">78</td>
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >3</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="	https://static.flashscore.com/res/image/data/Kv2QSkhT-4CIh5uRh.png" alt="">
+                        <span class="team-name">Atletico madrid</span>
+                        <span class="team-name-abbreviation">ATM</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">23</td>
+                        <td class="text-center">8</td>
+                        <td class="text-center">7</td>
+                        <td class="text-center">70:33</td>
+                        <td class="text-center">77</td>
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >4</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://static.flashscore.com/res/image/data/rcAkl5le-4CIh5uRh.png" alt="">
+                        <span class="team-name">Real Sociedad</span>
+                        <span class="team-name-abbreviation">RSO</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">21</td>
+                        <td class="text-center">8</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">51:35</td>
+                        <td class="text-center">71</td>
+                </tr>
+                <tr class="table-warning">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >5</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://static.flashscore.com/res/image/data/EBxZSOjT-4CIh5uRh.png" alt="">
+                        <span class="team-name">Villarreal
+                        </span>
+                        <span class="team-name-abbreviation">VIL</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">19</td>
+                        <td class="text-center">7</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">59:40</td>
+                        <td class="text-center">64</td>
+                </tr>
+                <tr class="table-warning">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >6</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://static.flashscore.com/res/image/data/YV7lpDU0-4CIh5uRh.png" alt="">
+                        <span class="team-name">Betis</span>
+                        <span class="team-name-abbreviation">BET</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">17</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">46:41</td>
+                        <td class="text-center">60</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >7</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="	https://static.flashscore.com/res/image/data/UTfY3r86-4CIh5uRh.png" alt="">
+                        <span class="team-name">Osasuna</span>
+                        <span class="team-name-abbreviation">OSA</span></td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">15</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">15</td>
+                    <td class="text-center">37:42</td>
+                    <td class="text-center">53</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >8</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://static.flashscore.com/res/image/data/GUtNYAWH-4CIh5uRh.png  " alt="">
+                        <span class="team-name">Athletic Bilbao</span>
+                        <span class="team-name-abbreviation">ATH</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">47:43</td>
+                        <td class="text-center">51</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >9</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://static.flashscore.com/res/image/data/WKsw8cne-4CIh5uRh.png" alt="">
+                        <span class="team-name">Mallorca</span>
+                        <span class="team-name-abbreviation">MLL</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">8</td>
+                        <td class="text-center">16</td>
+                        <td class="text-center">37:43</td>
+                        <td class="text-center">50</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >10</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://static.flashscore.com/res/image/data/6mZj79BN-4CIh5uRh.png" alt="">
+                        <span class="team-name">Girona</span>
+                        <span class="team-name-abbreviation">GIR</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">13</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">58:55</td>
+                        <td class="text-center">49</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >11</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://static.flashscore.com/res/image/data/QyKcNfhT-4CIh5uRh.png" alt="">
+                        <span class="team-name">Rayo Vallecano
+                        </span>
+                        <span class="team-name-abbreviation">RAY</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">13</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">45:53</td>
+                        <td class="text-center">49</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >12</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                  <td> <img src="https://static.flashscore.com/res/image/data/EcTGi086-4CIh5uRh.png" alt="">
+                      <span class="team-name">Sevilla</span>
+                      <span class="team-name-abbreviation">SEV</span></td>
+                      <td class="text-center">38</td>
+                      <td class="text-center">13</td>
+                      <td class="text-center">10</td>
+                      <td class="text-center">15</td>
+                      <td class="text-center">47:54</td>
+                      <td class="text-center">49</td>
+              </tr>
+              <tr>
+                <td style="position: relative; padding-left: 20px;">
+                  <span class="value" >13</span>
+                  <span class="status status-dot"></span>
+                </td>
+                <td> <img src="https://static.flashscore.com/res/image/data/INW8oRBN-4CIh5uRh.png" alt="">
+                    <span class="team-name">Celta Vigo</span>
+                    <span class="team-name-abbreviation">CEL</span></td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">11</td>
+                    <td class="text-center">10</td>
+                    <td class="text-center">17</td>
+                    <td class="text-center">43:53</td>
+                    <td class="text-center">43</td>
+            </tr>
+            <tr>
+              <td style="position: relative; padding-left: 20px;">
+                <span class="value" >14</span>
+                <span class="status status-dot"></span>
+              </td>
+              <td> <img src="https://static.flashscore.com/res/image/data/rPA6TR86-4CIh5uRh.png" alt="">
+                  <span class="team-name"> Cadiz CF</span>
+                  <span class="team-name-abbreviation">CAD</span></td>
+                  <td class="text-center">38</td>
+                  <td class="text-center">10</td>
+                  <td class="text-center">12</td>
+                  <td class="text-center">16</td>
+                  <td class="text-center">30:53</td>
+                  <td class="text-center">42</td>
+          </tr>
+          <tr>
+            <td style="position: relative; padding-left: 20px;">
+              <span class="value" >15</span>
+              <span class="status status-dot"></span>
+            </td>
+            <td> <img src="https://static.flashscore.com/res/image/data/hGMWMdT0-4CIh5uRh.png" alt="">
+                <span class="team-name">Getafe
+                </span>
+                <span class="team-name-abbreviation">GET</span></td>
+                <td class="text-center">38</td>
+                <td class="text-center">10</td>
+                <td class="text-center">12</td>
+                <td class="text-center">16</td>
+                <td class="text-center">34:45</td>
+                <td class="text-center">42</td>
+        </tr>
+        <tr>
+          <td style="position: relative; padding-left: 20px;">
+            <span class="value" >16</span>
+            <span class="status status-dot"></span>
+          </td>
+          <td> <img src="https://static.flashscore.com/res/image/data/8Cqphq8k-4CIh5uRh.png" alt="">
+              <span class="team-name">Valencia</span>
+              <span class="team-name-abbreviation">VAL</span></td>
+              <td class="text-center">38</td>
+              <td class="text-center">11</td>
+              <td class="text-center">9</td>
+              <td class="text-center">18</td>
+              <td class="text-center">42:45</td>
+              <td class="text-center">42</td>
+      </tr>
+      <tr>
+        <td style="position: relative; padding-left: 20px;">
+          <span class="value" >17</span>
+          <span class="status status-dot"></span>
+        </td>
+        <td> <img src="https://static.flashscore.com/res/image/data/Eeg4cBjC-4CIh5uRh.png" alt="">
+            <span class="team-name">Almeria </span>
+            <span class="team-name-abbreviation">ALM</span></td>
+            <td class="text-center">38</td>
+            <td class="text-center">11</td>
+            <td class="text-center">8</td>
+            <td class="text-center">19</td>
+            <td class="text-center">49:65</td>
+            <td class="text-center">41</td>
+    </tr>
+    <tr class="table-danger">
+      <td style="position: relative; padding-left: 20px;">
+        <span class="value" >18</span>
+        <span class="status status-dot"></span>
+      </td>
+      <td> <img src="https://static.flashscore.com/res/image/data/GvWsl3Sq-4CIh5uRh.png" alt="">
+          <span class="team-name">Valladolid</span>
+          <span class="team-name-abbreviation">VAL</span></td>
+          <td class="text-center">38</td>
+          <td class="text-center">11</td>
+          <td class="text-center">7</td>
+          <td class="text-center">20</td>
+          <td class="text-center">33:63</td>
+          <td class="text-center">40</td>
+  </tr>
+  <tr class="table-danger">
+    <td style="position: relative; padding-left: 20px;">
+      <span class="value" >19</span>
+      <span class="status status-dot"></span>
+    </td>
+    <td> <img src="https://static.flashscore.com/res/image/data/QeCoIpXH-4CIh5uRh.png"  alt="">
+        <span class="team-name">Espanyol</span>
+        <span class="team-name-abbreviation">ESP</span></td>
+        <td class="text-center">38</td>
+        <td class="text-center">8</td>
+        <td class="text-center">13</td>
+        <td class="text-center">17</td>
+        <td class="text-center">52:69</td>
+        <td class="text-center">37</td>
+</tr>
+<tr class="table-danger">
+  <td style="position: relative; padding-left: 20px;">
+                  <span class="value" >20</span>
+                  <span class="status status-dot"></span>
+                </td>
+  <td> <img src="https://static.flashscore.com/res/image/data/EVxB82BN-4CIh5uRh.png" alt="">
+      <span class="team-name">Elche</span>
+      <span class="team-name-abbreviation">ELC</span></td>
+      <td class="text-center">38</td>
+      <td class="text-center">5</td>
+      <td class="text-center">10</td>
+      <td class="text-center">23</td>
+      <td class="text-center">30:67</td>
+      <td class="text-center">25</td>
+</tr>
+            </tbody>
+        </table>
+    </div>
+
+
+<div class="container">
+  <div class="row ">
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Ghi Bàn</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3> ROBERT<br>
+                        LEWANDOWSKI</h3>
+                    <img src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="https://assets.laliga.com/squad/2022/t178/p56764/256x278/p56764_t178_2022_1_001_000.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">ROBERT LEWANDOWSKI</span>
+                <br>
+                <span class="team-nameunder">BARCELONA</span>
+              </span>
+            </td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/CGPhnpne-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">KARIM BENZEMA</span>
+                <br>
+                <span class="team-nameunder">REAL MADRID</span>
+              </span>
+            </td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/QeCoIpXH-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">JOSÉ LUIS SANMARTÍN MATO</span>
+                <br>
+                <span class="team-nameunder">Espanyol</span>
+              </span>
+            </td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/YV7lpDU0-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">BORJA IGLESIAS</span>
+                <br>
+                <span class="team-nameunder">Betis</span>
+              </span>
+            </td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/WKsw8cne-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">VEDAT MURIQI</span>
+                <br>
+                <span class="team-nameunder">Mallorca</span>
+              </span>
+            </td>
+            <td>15</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Kiến Tạo</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>ANTOINE  <br>
+                      GRIEZMANN </h3>
+                    <img src="https://static.flashscore.com/res/image/data/Kv2QSkhT-4CIh5uRh.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="https://assets.laliga.com/squad/2022/t175/p76650/256x278/p76650_t175_2022_1_001_000.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/Kv2QSkhT-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">ANTOINE GRIEZMANN </span>
+                <br>
+                <span class="team-nameunder">Atletico madrid</span>
+              </span>
+            </td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/rcAkl5le-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">MIKEL MERINO</span>
+                <br>
+                <span class="team-nameunder">Real Sociedad</span>
+              </span>
+            </td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/CGPhnpne-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name"> JOSÉ PAIXÃO DE OLIVEIRA JÚNIOR</span>
+                <br>
+                <span class="team-nameunder">Real Madrid</span>
+              </span>
+            </td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/CGPhnpne-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">RODRYGO SILVA DE GOES</span>
+                <br>
+                <span class="team-nameunder">Real Sociedad</span>
+              </span>
+            </td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">RAPHAEL DIAS BELLOLI</span>
+                <br>
+                <span class="team-nameunder">Barcelona</span>
+              </span>
+            </td>
+            <td>7</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Đường Chuyền</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>DANIEL  <br>
+                       PAREJO</h3>
+                    <img src="https://static.flashscore.com/res/image/data/EBxZSOjT-4CIh5uRh.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="https://assets.laliga.com/squad/2022/t449/p51952/256x278/p51952_t449_2022_1_001_000.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/EBxZSOjT-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">DANIEL PAREJO</span>
+                <br>
+                <span class="team-nameunder">Villarreal</span>
+              </span>
+            </td>
+            <td>2410</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/CGPhnpne-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">TONI KROOS</span>
+                <br>
+                <span class="team-nameunder">Real Madrid</span>
+              </span>
+            </td>
+            <td>2332</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">FRENKIE DE JONG</span>
+                <br>
+                <span class="team-nameunder">Barcelona</span>
+              </span>
+            </td>
+            <td>2257</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/EBxZSOjT-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">PAU TORRES</span>
+                <br>
+                <span class="team-nameunder">Villarreal</span>
+              </span>
+            </td>
+            <td>2163</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/INW8oRBN-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">UNAI NÚÑEZ</span>
+                <br>
+                <span class="team-nameunder">Celta Vigo</span>
+              </span>
+            </td>
+            <td>2013</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+   
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Giữ Sạch Lưới</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Ter  <br>
+                     Stegen</h3>
+                    <img src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="https://assets.laliga.com/squad/2022/t178/p77318/256x278/p77318_t178_2022_1_001_000.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png " width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Ter Stegen</span>
+                <br>
+                <span class="team-nameunder">Barcelona</span>
+              </span>
+            </td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/CGPhnpne-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Thibaut Courtois</span>
+                <br>
+                <span class="team-nameunder">Real Madrid</span>
+              </span>
+            </td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/EcTGi086-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Yassine Bounou</span>
+                <br>
+                <span class="team-nameunder">Sevilla</span>
+              </span>
+            </td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/EBxZSOjT-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Pepe Reina</span>
+                <br>
+                <span class="team-nameunder">Villarreal</span>
+              </span>
+            </td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="https://static.flashscore.com/res/image/data/rcAkl5le-4CIh5uRh.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name"> Alex Remiro</span>
+                <br>
+                <span class="team-nameunder">Real Sociedad</span>
+              </span>
+            </td>
+            <td>14</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- vua phá lưới -->
+
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+
+
+    <center><h1 class="p-4">Vua Phá Lưới</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">ROBERT LEWANDOWSKI<br></span></center>
+    <center> <img src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" width="45px" height="45px" alt="">
+      <span class="team-name">Barcelona</span>
+      <span class="team-name-abbreviation">BAR</span></center>
+    <center><br><img  class="img-fluid" src="https://cdnmedia.thethaovanhoa.vn/Upload/B0g2ZnIe48e9au7dkcAV3w/files/00012/1/01/5/Robert%20Lewandowski%20la%20may%20man%20cua%20Barcelona.jpg" width="auto" height="auto"></center>
+    
+    
+    
+     
+  </div>
+</div></div>
+
+<!-- vua phá luoi -->
+
+
+
+
+
+<!-- Găng tay vàng -->
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+
+
+    <center><h1 class="p-4">Găng Tay Vàng</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Ter Stegen<br></span></center>
+    <center><img src="	https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" width="45px" height="45px" alt="">
+      <span class="team-name">Barcelona</span>
+      <span class="team-name-abbreviation">ALT</span></center>
+    <center><br><img  class="img-fluid" src="https://estaticos-cdn.sport.es/clip/8db1c075-5fcc-4d2c-909d-96a6f3efb33c_alta-libre-aspect-ratio_default_0.jpg" width="auto" height="auto"></center>
+    
+    
+    <div class="info">
+      
+    
+    </div>
+  </div>
+
+  </div></div>
+</div>
+
+
+<!-- Cầu thủ trẻ xuất sắc nhất -->
+
+
+
+<!-- Cầu thủ xuất sắc nhất giải đấu -->
+
+
+
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+
+
+    <center><h1 class="p-4">Cầu Thủ Sắc Xuất Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">ROBERT LEWANDOWSKI<br></span></center>
+    <center> <img src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" width="45px" height="45px" alt="">
+      <span class="team-name">Barcelona</span>
+      <span class="team-name-abbreviation">BAR</span></center>
+    <center><br><img  class="img-fluid" src="https://cdnmedia.thethaovanhoa.vn/Upload/B0g2ZnIe48e9au7dkcAV3w/files/00012/1/01/5/Robert%20Lewandowski%20la%20may%20man%20cua%20Barcelona.jpg" width="auto" height="auto"></center>
+    
+    
+    
+     
+  </div>
+</center>
+
+</div>
+</div>
+<!-- cau thu xuat sac nhat mua -->
+
+
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+    <center><h1 class="p-4">Huấn Luyện Viên Xuất Sắc Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1">Xavi Hernandez<br></span></center>
+    <center>
+      <img src="https://static.flashscore.com/res/image/data/jZ8dSYS0-4CIh5uRh.png" width="45px" height="45px" alt="">
+      <span class="team-name">Manchester City</span>
+      <span class="team-name-abbreviation">MCI</span>
+    </center>
+    <center>
+      <br>
+      <img class="img-fluid" src="https://icdn.football-espana.net/wp-content/uploads/2023/03/fc-barcelona-v-real-madrid-cf-laliga-santander.jpg" width="1200" height="841">
+    </center>
+
+    <div class="info mt-6">
+      <p style="">
+        <h5>
+
+
+      </h5>
+      </p>
+    </div>
+  </div>
+ </div>
+</div>
+
+
+
+<div class="container mt-4">
+  <div class="row ">
+    <div class="col-lg-12">
+      <div class="card custom-bggtcn">
+        <div class="card-body">
+         <center><h4 class="card-title mt-3">Barcelona - Nhà Vô Địch Bóng Đá Tây Ban Nha</h4></center> 
+         
+          <div class="card-text mt-5">
+        <h5>
+        
+
+Barcelona đã giành chức vô địch La Liga mùa giải 2022-23 sau khi đánh bại Espanyol 4-2 trên sân khách vào ngày 4 tháng 6 năm 2023. Đây là lần thứ 27 trong lịch sử và lần đầu tiên kể từ năm 2019 mà đội bóng xứ Catalan đăng quang ở giải đấu số một Tây Ban Nha.
+<br>
+Barcelona đã có một mùa giải khó khăn khi phải thay đổi HLV giữa chừng, từ Ronald Koeman sang Xavi Hernandez vào tháng 11 năm 2021. Tuy nhiên, dưới sự dẫn dắt của cựu danh thủ, Barca đã tìm lại phong độ và lối chơi tấn công đẹp mắt, mang lại niềm vui cho người hâm mộ.
+<br>
+Barcelona đã có những chiến thắng ấn tượng trước các đối thủ cạnh tranh như Atletico Madrid, Sevilla hay Valencia. Đặc biệt, họ đã vượt qua Real Madrid hai lần trong các trận El Clasico, với tổng tỷ số là 5-2. Nhờ đó, họ đã bỏ xa Real Madrid 6 điểm và Atletico Madrid 8 điểm trên bảng xếp hạng.
+<br>
+Barcelona cũng đã có những cầu thủ xuất sắc trong mùa giải này. Robert Lewandowski, người được chiêu mộ từ Bayern Munich vào mùa hè năm 2022, đã ghi được 30 bàn thắng và giành danh hiệu Pichichi (vua phá lưới La Liga). Ansu Fati, Pedri và Frenkie de Jong cũng đã chơi rất hay và góp phần quan trọng vào thành công của đội bóng.
+<br>
+Barcelona đã chứng minh rằng họ vẫn là một đội bóng mạnh mẽ và giàu truyền thống, dù đã phải trải qua những khó khăn và biến động. Họ đã làm hài lòng người hâm mộ bằng cách giành lại ngôi vương La Liga và khẳng định vị thế của mình trong bóng đá Tây Ban Nha cũng như Châu Âu.
+        </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="container-fluid  custom-bgft">
+  <div class="container custom-bgft mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <center>
+          <a href="https://www.laliga.com/en-GB">
+            <img class="img-fluid " src="https://assets.laliga.com/assets/logos/laliga-h-negativo/laliga-h-negativo-1200x1200.png" alt="Logo 1" width="200px" height="200px">
+          </a>
+        </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <a href="/index.html">
+            <img class="img-fluid" src="images/logowweb.png" alt="Logo 2" width="150px" height="150px">
+          </a>
+        </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <a href="https://www.uefa.com/">
+            <img class="img-fluid" src="images/footer/uefa.png" alt="Logo 3" width="150px" height="150px">
+          </a>
+        </center>
+      </div>
+      <div class="col-12 mt-4"> <!-- Added div -->
+       
+      </div>
+    </div>
+  </div>
+</footer>
+<footer class="container-fluid bg-black"  >
+  <div class="container bg-black">
+    <center> <p style="color: aliceblue;">bản quyền thuộc nhóm....</p> </center>
+
+
+  </div>
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
+<script>
+var toggleSidebarBtn = document.getElementById("toggleSidebarBtn");
+var sidebar = document.getElementById("sidebar");
+var content = document.querySelector(".content");
+
+toggleSidebarBtn.addEventListener("click", function () {
+    if (window.innerWidth > 1000) {
+        sidebar.classList.toggle("active");
+        content.classList.toggle("active");
+    } else {
+        sidebar.classList.toggle("active2");
+    }
+});
+
+window.addEventListener("resize", function () {
+   
+        sidebar.classList.remove("active2");
+  
+        sidebar.classList.remove("active");
+        content.classList.remove("active");
+ 
+});
+</script>
+<script>
+
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

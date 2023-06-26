@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jQuerry.js">
+    <link rel="stylesheet" href="script.js">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+ 
+</head>
+<style>
+ 
+   .bordered {
+ border: 1px solid black;
+}
+
+/* CSS cho việc ẩn các đường kẻ trong responsive layout */
+@media (max-width: 768px) {
+ .bordered {
+   border: none;
+ }
+}
+</style>
+<body class="custom-bgbody">
+  <nav id="navbar" class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="navbar-brand-wrapper d-flex">
+        <button id="toggleSidebarBtn" class="navbar-toggler navbar-toggler-left" type="button" aria-expanded="false" aria-label="">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logowweb.png" alt="Logo" width="60px" height="60px" class="img-fluid">
+            <span class="fs-1 p-4" style="color: white;">Football News</span>
+        </a>
+
+    </div>
+
+    
+</nav>
+
+
+  <div class="sidebar" id="sidebar">
+   
+    <ul class="navbar-nav">
+        <center>
+      <li class="nav-item">
+      
+        <a class="nav-link" href="index.html">Trang chủ</a>
+ 
+      </li>
+    </center>   
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="epl.html">Premier League</a>
+      </li>
+    </center>   
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="laliga.html">LaLiga</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="L1.html">Ligue1</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="seriea.html">Serie A</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="bundes.html">Bundesliga</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="Login.html">Đăng Nhập</a>
+      </li>
+    </center>
+    </ul>
+  </div>
+
+
+<div class="content mt-2">
+    
+
+  
+  <div class="container mt-12 custom-bglogogiaidau">
+    <nav class="header">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-1">
+          <center><img src="https://img.legaseriea.it/vimages/632899a6/SerieA_TIM_RGB.jpg?webp&q=70&size=1965x-" width="60" height="103" alt="logo"></center>
+        </div>
+        <div class="col-12 col-md-11 text-center">
+          <h1 class="display-3 fw-bolder" style="font-family: PremierSans-Heavy,Arial,Helvetica Neue,Helvetica,sans-serif; color: white;">Vô Địch Quốc Gia Ý</h1>
+        </div>
+      </div>
+    </nav>  
+  </div>
+  
+    <div class="container mt-3 "  >
+        <table class="tbl-rank table table-rounded">
+            <thead class="bg-light">
+                <tr >
+                    <th><span class="team-name">Hạng</span>
+                      <span class="team-name-abbreviation">H</span></th>
+                    <th><span class="team-name">Đội</span>
+                      <span class="team-name-abbreviation">Đ</span></th>
+                    <th class="text-center"><span class="team-name">Trận</span>
+                      <span class="team-name-abbreviation">T</span></th>
+                    <th class="text-center"><span class="team-name">Thắng</span>
+                      <span class="team-name-abbreviation">T</span></th>
+                    <th class="text-center"><span class="team-name">Hòa</span>
+                      <span class="team-name-abbreviation">H</span></th>
+                    <th class="text-center"><span class="team-name">Bại</span>
+                      <span class="team-name-abbreviation">B</span></th>
+                    <th class="text-center"><span class="team-name">Hiệu Số</span>
+                        <span class="team-name-abbreviation">HS</span></th>
+                    <th class="text-center"><span class="team-name">Điểm</span>
+                      <span class="team-name-abbreviation">Đ</span</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white table-group-divider">
+                <tr class="table-success">
+                    <td style="position: relative; padding-left: 20px;">
+                      <span class="value" >1</span>
+                      <span class="status status-dot"></span>
+                    </td>
+                    <td>
+                        <img class="logo-rank" src="	https://img.legaseriea.it/vimages/62cef532/napoli.png?webp&q=70&size=600x-" alt="">
+                        <span class="team-name">Napoli</span>
+                        <span class="team-name-abbreviation">NAP</span>
+                    </td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">28</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">+49</td>
+                    <td class="text-center">90</td>   
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >2</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td>
+                        <img src="https://img.legaseriea.it/vimages/62cef4d5/lazio.png?webp&q=70&size=600x-" alt="">
+                        <span class="team-name">Lazio</span>
+                        <span class="team-name-abbreviation">LAZ</span>
+                    </td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">22</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">+30</td>
+                    <td class="text-center">74</td>
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >3</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="		https://img.legaseriea.it/vimages/62cef496/inter.png?webp&q=70&size=600x-" alt="">
+                        <span class="team-name">Inter</span>
+                        <span class="team-name-abbreviation">INT</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">23</td>
+                        <td class="text-center">3</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">+29</td>
+                        <td class="text-center">72</td>
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >4</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="	https://img.legaseriea.it/vimages/62cef513/milan.png?webp&q=70&size=600x-
+                      " alt="">
+                        <span class="team-name">Milan</span>
+                        <span class="team-name-abbreviation">MIL</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">20</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">8</td>
+                        <td class="text-center">+21</td>
+                        <td class="text-center">70</td>
+                </tr>
+                <tr class="table-warning">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >5</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="	https://img.legaseriea.it/vimages/62cfd69d/atalanta.png?webp&q=70&size=600x-
+                      " alt="">
+                        <span class="team-name">Atalanta</span>
+                        <span class="team-name-abbreviation">ATA</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">19</td>
+                        <td class="text-center">7</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">+18</td>
+                        <td class="text-center">64</td>
+                </tr>
+                <tr class="table-warning">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >6</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="	https://img.legaseriea.it/vimages/62cfd5ce/roma.png?webp&q=70&size=600x-
+                      " alt="">
+                        <span class="team-name">Roma</span>
+                        <span class="team-name-abbreviation">ROM</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">18</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">11</td>
+                        <td class="text-center">+12</td>
+                        <td class="text-center">63</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >7</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://img.legaseriea.it/vimages/62cfda28/colore=BLACK.png?webp&q=70&size=600x-
+                      " alt="">
+                        <span class="team-name">Juventus</span>
+                        <span class="team-name-abbreviation">JUV</span></td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">22</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">10</td>
+                    <td class="text-center">+23</td>
+                    <td class="text-center">62</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >8</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="	https://img.legaseriea.it/vimages/62cef452/fiorentina.png?webp&q=70&size=600x-" alt="">
+                        <span class="team-name">Fiorentina</span>
+                        <span class="team-name-abbreviation">FIO</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">11</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">+10</td>
+                        <td class="text-center">56</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >9</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://img.legaseriea.it/vimages/62cef3f6/bologna.png?webp&q=70&size=600x-" alt="">
+                        <span class="team-name">Bologna</span>
+                        <span class="team-name-abbreviation">BOL</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">+4</td>
+                        <td class="text-center">54</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >10</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://img.legaseriea.it/vimages/62cef5cb/torino.png?webp&q=70&size=600x-" alt="">
+                        <span class="team-name">Torino</span>
+                        <span class="team-name-abbreviation">TOR</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">11</td>
+                        <td class="text-center">13</td>
+                        <td class="text-center">+1</td>
+                        <td class="text-center">53</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >11</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="	https://img.legaseriea.it/vimages/62c6acbd/monza.png?webp&q=70&size=600x-                      " alt="">
+                        <span class="team-name">Monza</span>
+                        <span class="team-name-abbreviation">MON</span></td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">-4</td>
+                        <td class="text-center">52</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >12</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                  <td> <img src="	https://img.legaseriea.it/vimages/62cef5e9/udinese.png?webp&q=70&size=600x-" alt="">
+                      <span class="team-name">Udinese</span>
+                      <span class="team-name-abbreviation">UDI</span></td>
+                      <td class="text-center">38</td>
+                      <td class="text-center">11</td>
+                      <td class="text-center">13</td>
+                      <td class="text-center">14</td>
+                      <td class="text-center">-1</td>
+                      <td class="text-center">46</td>
+              </tr>
+              <tr>
+                <td style="position: relative; padding-left: 20px;">
+                  <span class="value" >13</span>
+                  <span class="status status-dot"></span>
+                </td>
+                <td> <img src="https://img.legaseriea.it/vimages/62cef590/sassuolo.png?webp&q=70&size=600x-" alt="">
+                    <span class="team-name">Sassuolo</span>
+                    <span class="team-name-abbreviation">SAS</span></td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">12</td>
+                    <td class="text-center">9</td>
+                    <td class="text-center">17</td>
+                    <td class="text-center">-14</td>
+                    <td class="text-center">45</td>
+            </tr>
+            <tr>
+              <td style="position: relative; padding-left: 20px;">
+                <span class="value" >14</span>
+                <span class="status status-dot"></span>
+              </td>
+              <td> <img src="	https://img.legaseriea.it/vimages/62cef42e/empoli.png?webp&q=70&size=600x-" alt="">
+                  <span class="team-name">Empoli</span>
+                  <span class="team-name-abbreviation">EMP</span></td>
+                  <td class="text-center">38</td>
+                  <td class="text-center">10</td>
+                  <td class="text-center">13</td>
+                  <td class="text-center">15</td>
+                  <td class="text-center">-12</td>
+                  <td class="text-center">43</td>
+          </tr>
+          <tr>
+            <td style="position: relative; padding-left: 20px;">
+              <span class="value" >15</span>
+              <span class="status status-dot"></span>
+            </td>
+            <td> <img src="	https://img.legaseriea.it/vimages/62cef553/salernitana.png?webp&q=70&size=600x-" alt="">
+                <span class="team-name">Salernitana</span>
+                <span class="team-name-abbreviation">SAL</span></td>
+                <td class="text-center">38</td>
+                <td class="text-center">9</td>
+                <td class="text-center">15</td>
+                <td class="text-center">14</td>
+                <td class="text-center">-14</td>
+                <td class="text-center">3429</td>
+        </tr>
+        <tr>
+          <td style="position: relative; padding-left: 20px;">
+            <span class="value" >16</span>
+            <span class="status status-dot"></span>
+          </td>
+          <td> <img src="	https://img.legaseriea.it/vimages/62cef4f6/lecce.png?webp&q=70&size=600x-            " alt="">
+              <span class="team-name">Lecce</span>
+              <span class="team-name-abbreviation">LEC</span></td>
+              <td class="text-center">38</td>
+              <td class="text-center">8</td>
+              <td class="text-center">12</td>
+              <td class="text-center">18</td>
+              <td class="text-center">-13</td>
+              <td class="text-center">36</td>
+      </tr>
+      <tr>
+        <td style="position: relative; padding-left: 20px;">
+          <span class="value" >17</span>
+          <span class="status status-dot"></span>
+        </td>
+        <td> <img src="https://img.legaseriea.it/vimages/62cfe8b8/colore=BLUE.png?webp&q=70&size=600x-" alt="">
+            <span class="team-name">Hellas Verona</span>
+            <span class="team-name-abbreviation">VER</span></td>
+            <td class="text-center">38</td>
+            <td class="text-center">7</td>
+            <td class="text-center">10</td>
+            <td class="text-center">21</td>
+            <td class="text-center">-28</td>
+            <td class="text-center">31</td>
+    </tr>
+    <tr class="table-danger">
+      <td style="position: relative; padding-left: 20px;">
+        <span class="value" >18</span>
+        <span class="status status-dot"></span>
+      </td>
+      <td> <img src="	https://img.legaseriea.it/vimages/62cef5ae/spezia.png?webp&q=70&size=600x-" alt="">
+          <span class="team-name">Spezia</span>
+          <span class="team-name-abbreviation">SPE</span></td>
+          <td class="text-center">38</td>
+          <td class="text-center">6</td>
+          <td class="text-center">13</td>
+          <td class="text-center">19</td>
+          <td class="text-center">-31</td>
+          <td class="text-center">31</td>
+  </tr>
+  <tr class="table-danger">
+    <td style="position: relative; padding-left: 20px;">
+      <span class="value" >19</span>
+      <span class="status status-dot"></span>
+    </td>
+    <td> <img src="https://img.legaseriea.it/vimages/62cef3c1/cremonese.png?webp&q=70&size=600x-"  alt="">
+        <span class="team-name">Cremonese</span>
+        <span class="team-name-abbreviation">CRE</span></td>
+        <td class="text-center">38</td>
+        <td class="text-center">5</td>
+        <td class="text-center">12</td>
+        <td class="text-center">21</td>
+        <td class="text-center">-33</td>
+        <td class="text-center">27</td>
+</tr>
+<tr class="table-danger">
+  <td style="position: relative; padding-left: 20px;">
+                  <span class="value" >20</span>
+                  <span class="status status-dot"></span>
+                </td>
+  <td> <img src="	https://img.legaseriea.it/vimages/62cef574/sampdoria.png?webp&q=70&size=600x-" alt="">
+      <span class="team-name">Sampdoria</span>
+      <span class="team-name-abbreviation">SAM</span></td>
+      <td class="text-center">38</td>
+      <td class="text-center">3</td>
+      <td class="text-center">10</td>
+      <td class="text-center">25</td>
+      <td class="text-center">-47</td>
+      <td class="text-center">19</td>
+</tr>
+            </tbody>
+        </table>
+    </div>
+
+
+<div class="container">
+  <div class="row ">
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Ghi Bàn</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Victor <br>
+                    Osimhen</h3>
+                    <img src="images/serieA/Nigeria.svg" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6" class="player-img">
+                    <img src="https://img.legaseriea.it/vimages/630ce786/SMHCTR.png" alt="" width="300" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="	https://cdn.24h.com.vn/upload/livescore/2-2021/kytq1/2021-05-17/napoli_35x35.png" width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Victor Osimhen</span>
+                <br>
+                <span class="team-nameunder">Napoli</span>
+              </span>
+            </td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="https://cdn.24h.com.vn/upload/livescore/2-2021/giangbt/2021-05-25/internazionale_35x35.png" width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Lautaro Martínez</span>
+                <br>
+                <span class="team-nameunder">Inter</span>
+              </span>
+            </td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="https://cdn.24h.com.vn/upload/livescore/3-2021/kytq1/2021-08-25/091147356_salernitana_35x35.png" width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Boulaye Dia</span>
+                <br>
+                <span class="team-nameunder"> Salernitana</span>
+              </span>
+            </td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="https://cdn.24h.com.vn/upload/livescore/2-2021/kytq1/2021-05-17/milan_35x35.png" width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Rafael Leão</span>
+                <br>
+                <span class="team-nameunder">Milan</span>
+              </span>
+            </td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="https://cdn.24h.com.vn/upload/livescore/2-2021/kytq1/2021-05-17/atalanta_35x35.png" width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Ademola Lookman</span>
+                <br>
+                <span class="team-nameunder">Atalanta</span>
+              </span>
+            </td>
+            <td>13</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Kiến Tạo</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Khvicha <br>
+                      Kvaratskhelia</h3>
+                    <img src="images/serieA/Gruzia.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="https://img.legaseriea.it/vimages/630ce786/KVRVCH.png" alt="" width="300" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="https://cdn.24h.com.vn/upload/livescore/2-2021/kytq1/2021-05-17/napoli_35x35.png" width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Khvicha Kvaratskhelia</span>
+                <br>
+                <span class="team-nameunder">Napoli</span>
+              </span>
+            </td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="https://cdn.24h.com.vn/upload/livescore/2-2021/kytq1/2021-05-17/bologna_35x35.png" width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Musa Barrow</span>
+                <br>
+                <span class="team-nameunder">Bologna</span>
+              </span>
+            </td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="	https://cdn.24h.com.vn/upload/livescore/2-2021/kytq1/2021-05-17/milan_35x35.png
+              " width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Rafael Leão</span>
+                <br>
+                <span class="team-nameunder">Milan</span>
+              </span>
+            </td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="	https://cdn.24h.com.vn/upload/livescore/2-2021/kytq1/2021-05-17/lazio_35x35.png
+              " width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Sergej Milinković-Savić</span>
+                <br>
+                <span class="team-nameunder">Lazio</span>
+              </span>
+            </td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="	https://img.legaseriea.it/vimages/62cfda28/colore=BLACK.png" width="32px" height="32px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Filip Kostić</span>
+                <br>
+                <span class="team-nameunder">Juventus</span>
+              </span>
+            </td>
+            <td>8</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Số Phút Thi Đấu</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Wladimiro
+                      <br>
+                      Falcone</h3>
+                    <img src="images/serieA/italy.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="	https://img.legaseriea.it/vimages/630ce628/FLCWL.png" alt="" width="360" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="	https://img.legaseriea.it/vimages/62cef4f6/lecce.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Wladimiro Falcone                </span>
+                <br>
+                <span class="team-nameunder">Lecce</span>
+              </span>
+            </td>
+            <td>3420</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="	https://img.legaseriea.it/vimages/62cef5cb/torino.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Vanja Milinković-Savić                </span>
+                <br>
+                <span class="team-nameunder">Torino</span>
+              </span>
+            </td>
+            <td>3420</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/f/f2/Udinese_calcio.png/180px-Udinese_calcio.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Marco Silvestri
+                </span>
+                <br>
+                <span class="team-nameunder">Udinese</span>
+              </span>
+            </td>
+            <td>3420</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="	https://upload.wikimedia.org/wikipedia/vi/thumb/e/ed/SS_Lazio.png/260px-SS_Lazio.png
+              " width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Ivan Provedel
+                </span>
+                <br>
+                <span class="team-nameunder">Lazio</span>
+              </span>
+            </td>
+            <td>3412</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="	https://img.legaseriea.it/vimages/62cef4f6/lecce.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Federico Baschirotto
+                </span>
+                <br>
+                <span class="team-nameunder">Lecce</span>
+              </span>
+            </td>
+            <td>3330</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+   
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Nhận Thẻ Đỏ</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Federico  <br>
+                      Marchetti</h3>
+                    <img src="images/serieA/italy.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="	https://img.legaseriea.it/vimages/63ce63f2/MARCH.png" alt="" width="360" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="	https://img.legaseriea.it/vimages/62cef5ae/spezia.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Federico Marchetti</span>
+                <br>
+                <span class="team-nameunder">Spezia</span>
+              </span>
+            </td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="	https://img.legaseriea.it/vimages/62cef4d5/lazio.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Luís Maximiano</span>
+                <br>
+                <span class="team-nameunder">Lazio</span>
+              </span>
+            </td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="	https://img.legaseriea.it/vimages/62cef42e/empoli.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Lorenzo Tonelli</span>
+                <br>
+                <span class="team-nameunder">Empoli</span>
+              </span>
+            </td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="https://img.legaseriea.it/vimages/62cfd5ce/roma.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Marash Kumbulla</span>
+                <br>
+                <span class="team-nameunder">Roma</span>
+              </span>
+            </td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="	https://img.legaseriea.it/vimages/62c6acbd/monza.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Giulio Donati
+                </span>
+                <br>
+                <span class="team-nameunder">Monza</span>
+              </span>
+            </td>
+            <td>1</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- vua phá lưới -->
+
+<div class="container border mt-4 ">
+  
+  <div class="custom-bggtcn">
+
+
+    <center><h1 class="p-4">Vua Phá Lưới</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Victor Osimhen
+      <br></span></center>
+    <center> <img src="	https://img.legaseriea.it/vimages/62cef532/napoli.png" width="45px" height="45px" alt="">
+      <span class="team-name">Napoli</span>
+      <span class="team-name-abbreviation">NAP</span></center>
+    <center><br><img  class="img-fluid" src="https://img.legaseriea.it/vimages/630ce786/SMHCTR.png" width="auto" height="auto"></center>
+    
+    
+    <div class="info">
+      
+
+    </div>
+  </div>
+</div>
+
+<!-- vua phá luoi -->
+
+
+
+
+
+<!-- Găng tay vàng -->
+<div class="container border mt-4 ">
+  
+  <div class="  custom-bggtcn">
+
+
+    <center><h1 class="p-4">Thủ Môn Xuất Sắc Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Ivan Provedel      <br></span></center>
+    <center><img src="	https://img.legaseriea.it/vimages/62cef4d5/lazio.png" width="45px" height="45px" alt="">
+      <span class="team-name">Lazio</span>
+      <span class="team-name-abbreviation">LAZ</span></center>
+    <center><br><img  class="img-fluid" src="	https://img.legaseriea.it/vimages/647b99b3/edited-provedel-jpg-jpeg.jpg" width="auto" height="auto"></center>
+    
+  </div>
+</div>
+
+
+<!-- Cầu thủ trẻ xuất sắc nhất -->
+<div class="container border mt-4 ">
+  
+  <div class="  custom-bggtcn">
+    <center><h1 class="p-4">Hậu Vệ Xuất Sắc Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;"> Minjae Kim<br></span></center>
+    <center> <img src="https://cdn.24h.com.vn/upload/livescore/2-2021/kytq1/2021-05-17/napoli_35x35.png" width="45px" height="45px" alt="">
+      <span class="team-name">Napoli</span>
+      <span class="team-name-abbreviation">NAP</span></center>
+    <center><br><img  class="img-fluid" src="	https://img.legaseriea.it/vimages/647cc11e/16-9-agr64213-jpg-jpeg.jpg" width="1200" height="841"></center>
+    
+    
+    <div class="info">
+      
+  
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Cầu thủ xuất sắc nhất giải đấu -->
+
+
+
+
+<div class="container border mt-4 ">
+  
+  <div class="  custom-bggtcn">
+    <center><h1 class="p-4">Cầu Thủ Xuất Sắc Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Khvicha Kvaratskhelia<br></span></center>
+    <center> <img src="https://cdn.24h.com.vn/upload/livescore/2-2021/kytq1/2021-05-17/napoli_35x35.png" width="45px" height="45px" alt="">
+      <span class="team-name">Napoli</span>
+      <span class="team-name-abbreviation">NAP</span></center>
+    <center><br><img  class="img-fluid" src="	https://img.legaseriea.it/vimages/647cc0c8/16-9-agr64362-jpg-jpeg.jpg" width="1200" height="841"></center>
+  </div>
+</center>
+
+</div>
+<!-- cau thu xuat sac nhat mua -->
+
+
+<div class="container border mt-4">
+  <div class="custom-bggtcn">
+    <center><h1 class="p-4">Tiền Vệ Xuất Sắc Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1">Nicolò Barella<br></span></center>
+    <center>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/220px-FC_Internazionale_Milano_2021.svg.png" width="45px" height="45px" alt="">
+      <span class="team-name">Inter</span>
+      <span class="team-name-abbreviation">INT</span>
+    </center>
+    <center>
+      <br>
+      <img class="img-fluid" src="https://img.legaseriea.it/vimages/647b707c/16-9-premiazione-barella-jpg-jpeg.jpg" width="1200" height="841">
+    </center>
+
+    
+  </div>
+</div>
+
+
+
+<div class="container mt-4">
+  <div class="row ">
+    <div class="col-lg-12">
+      <div class="card custom-bggtcn">
+        <div class="card-body">
+         <center><h4 class="card-title mt-3">Napoli giành chức vô địch Serie A sau 33 năm chờ đợi</h4></center> 
+         
+          <div class="card-text mt-5">
+            <h5>
+              Napoli đã chính thức trở thành nhà vô địch Serie A mùa giải 2022-2023 sau trận hòa Udinese ở vòng 33, qua đó chấm dứt 33 năm chờ đợi kể từ khi đăng quang lần gần nhất vào năm 1990.            </h5>
+            <center><img class="img-fluid" src="	https://image.nhandan.vn/w800/Uploaded/2023/buimsbrwbvhiob/2023_05_05/napolichampions0505-376.png" width="800" height="561"></center>
+            <h5>
+              Sau trận hòa thất vọng trước Salernitana, Napoli tiếp tục chỉ giành được kết quả hòa 1-1 trong chuyến làm khách trên sân Udinese ở trận đấu muộn vòng 33 Serie A.  <br>
+
+              Victor Osimhen đã tỏa sáng khi ghi bàn thắng quan trọng ở phút 52 giúp Napoli tránh khỏi thất bại sau khi để cho Udinese dẫn trước bởi pha lập công của Sandi Lovric ngay phút 13. <br>
+              
+              Bàn thắng không chỉ giúp Osimhen ghi danh lịch sử với tư cách là cầu thủ châu Phi ghi bàn nhiều nhất tại giải vô địch quốc gia Italy (22 bàn), mà còn chính thức đưa Napoli lên ngôi Serie A mùa giải 2022-23. <br>
+              
+              Sau 33 vòng đấu, Napoli giành được 80 điểm, nhiều hơn đội xếp sau Lazio đến 16 điểm trong khi mùa giải chỉ còn 5 vòng đấu nữa là khép lại.            </h5>
+            <center><img class="img-fluid" src="	https://image.nhandan.vn/w790/Uploaded/2023/buimsbrwbvhiob/2023_05_05/osimhen05-6841.jpg" width="800" height="561"></center>
+            <h5>
+              Chức vô địch này giúp Napoli chấm dứt "cơn khát danh hiệu" ở Serie sau đúng 33 năm kể từ khi đăng quang ở mùa giải 1989-1990 - giải đấu mà họ có Diego Maradona trong đội hình. <br>
+
+              Đây cũng là lần thứ ba trong lịch sử Napoli giành Scudetto (1986-87, 1989-90 và 2022-23), cân bằng với thành tích của AS Roma.            </h5>
+
+            <h5>
+              Chức vô địch Serie A là phần thưởng xứng đáng dành Napoli sau khi đoàn quân của huấn luyện viên Luciano Spalletti đã trải qua mùa giải đầy ấn tượng. <br>
+
+              Victor Osimhen, cầu thủ ghi bàn ở trận hòa Udinese chính là người góp công cho thành công của Napoli. Tiền đạo người Nigeria có mùa giải thăng hoa với 22 bàn thắng và nhiều khả năng sẽ giành được danh hiệu Vua phá lưới Serie A.            </h5>
+            <center><img class="img-fluid" src="https://image.nhandan.vn/w790/Uploaded/2023/buimsbrwbvhiob/2023_05_05/napoli0505-5709.png" width="800" height="561"></center>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="container-fluid  custom-bgft">
+  <div class="container custom-bgft mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <center>
+          <img class="img-fluid" src="images/logo2.png" alt="Logo 1" width="150px" height="150px">
+          <p class="text-white">Số điện thoại: 123456789</p>
+          <p class="text-white">Địa chỉ: 123 ABC Street, XYZ City</p>
+          <p class="text-white">Trang we custom-bgftb: <a href="https://www.example1.com" class="text-white">www.example1.com</a></p>
+        </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <img src="images/epl/logo.png" alt="Logo 2" width="150px" height="150px">
+          <p class="text-white">Số điện thoại: 987654321</p>
+          <p class="text-white">Địa chỉ: 456 XYZ Street, ABC City</p>
+          <p class="text-white">Trang web: <a href="https://www.example2.com" class="text-white">www.example2.com</a></p>
+        </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <img src="images/epl/logo-manchester-city.webp" alt="Logo 3" width="150px" height="150px">
+          <p class="text-white">Số điện thoại: 555555555</p>
+          <p class="text-white">Địa chỉ: 789 XYZ Street, ABC City</p>
+          <p class="text-white">Trang web: <a href="https://www.example3.com" class="text-white">www.example3.com</a></p>
+        </center>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</div>
+
+
+
+
+
+<script>
+var toggleSidebarBtn = document.getElementById("toggleSidebarBtn");
+var sidebar = document.getElementById("sidebar");
+var content = document.querySelector(".content");
+
+toggleSidebarBtn.addEventListener("click", function () {
+    if (window.innerWidth > 1000) {
+        sidebar.classList.toggle("active");
+        content.classList.toggle("active");
+    } else {
+        sidebar.classList.toggle("active2");
+    }
+});
+
+window.addEventListener("resize", function () {
+   
+        sidebar.classList.remove("active2");
+  
+        sidebar.classList.remove("active");
+        content.classList.remove("active");
+ 
+});
+</script>
+<script>
+
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

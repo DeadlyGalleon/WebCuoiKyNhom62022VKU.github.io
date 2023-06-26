@@ -1,0 +1,572 @@
+        /* Hiển thị nút toggle kể cả khi phóng to */
+        @media (min-width: 992px) {
+            #toggleSidebarBtn {
+                display: block !important;
+            }
+        }
+
+        /* Hiển thị nút toggle kể cả khi thu nhỏ */
+        @media (max-width: 991.98px) {
+            .navbar-toggler {
+                display: block !important;
+            }
+        }
+
+
+
+
+
+/* ===================================================================== */
+
+/* ============================================================== */
+
+.column {
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .column {
+        width: 50%;
+    }
+}
+@media (max-width: 600px) {
+    .team-cell {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-name {
+        margin: 10px;
+    }
+}
+
+.team-cell {
+    display: flex;
+    align-items: center;
+}
+
+.team-name {
+    margin-left: 20px;
+}
+
+.team-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: max-width 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 400px) {
+    .team-name {
+        max-width: 30px; /* Độ rộng tối đa của viết tắt */
+    }
+}
+
+
+.team-nameunder {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+
+.border {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.info {
+  margin-top: 20px;
+}
+
+.info img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.info p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.custom-bglogogiaidaubun{
+  background-color: #adadad;
+}
+
+.team-name {
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.team-name-abbreviation {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .team-name {
+        display: none;
+    }
+
+    .team-name-abbreviation {
+        display: inline;
+    }
+}
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .player-info {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .player-name {
+    font-weight: bold;
+  }
+  
+  .team-nameunder {
+    font-size: 13px;
+  }
+
+/* ============================================================== */
+.status-dot {
+    border-radius: 100%;
+    width: 7px;
+    height: 7px;
+    background: #adadad;
+    bottom: 2px;
+    left: -15px;
+}
+.status {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+.value{
+    margin-top: 3px;
+    width: 2rem;
+    display: inline-block;
+}
+.tbl-rank tbody tr td{
+    padding-top: 18px;
+}
+.tbl-rank tbody tr td img{
+    width: 32px;
+    height: 32px;
+}
+footer{
+  height: auto;
+}
+.footer-ct{
+  
+
+}
+
+
+/* ============================================================== */
+
+@media (max-width: 360px) {
+  body {
+    min-width: 360px;
+    overflow-x: auto;
+    background-color: aqua;
+    
+  }
+}
+.d-flex img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+
+.navbar-toggler {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+.navbar {
+            z-index: 999;
+}
+@media (max-width: 1080px) {
+    .navbar {
+        height: 75px;
+    }
+    .navbar-brand {
+        margin-top: 10px;
+    }
+    .navbar-brand img {
+        max-height: 55px;
+    }
+}
+.navbar-hidden {
+    display: none;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    height: 80px; /* Chiều cao cố định của navbar */
+    background-color: #091c3e;
+    transition: all 0.1s;
+}
+.navbarepl {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 80px; /* Chiều cao cố định của navbar */
+  background-color: #091c3e;
+  transition: all 0.1s;
+}
+
+
+
+.navbar.shrink .navbar-brand .fs-1 {
+    font-size: 1rem; /* Kích thước thu nhỏ của tiêu đề */
+}
+
+.navbar.shrink .navbar-collapse {
+    overflow: hidden;
+    display: none; /* Ẩn phần collapse của navbar khi thu nhỏ */
+}
+
+.navbar.shrink .navbar-toggler {
+    display: block; /* Hiển thị nút toggle khi thu nhỏ */
+}
+
+.navbar.shrink .navbar-toggler-icon {
+  color: white;
+
+    
+}
+
+
+
+
+ 
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: -280px;
+    width: 280px;
+    height: calc(100% - 100px);
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+    z-index: 9999;
+}
+
+
+.sidebar.active {
+    left: 0;
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content {
+    transition: all 0.2s ease;
+    padding-left: 0;
+    margin-left: 0;
+    
+}
+
+.content.active {
+    padding-left: 140px;
+    margin-left: 140px;
+}
+
+
+
+.container.custom-bglogogiaidau {
+    padding: 20px;
+  }
+  .header {
+    background-color:  #091c3e; 
+    padding: 20px;
+    color: white;
+  }
+  .header h1 {
+    font-family: PremierSans-Heavy, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+  }
+  .header img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  @media (min-width: 768px) {
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+  
+    .header h1 {
+      font-size: 3rem;
+      margin-left: 20px;
+    }
+  
+    .header img {
+      max-width: 150px;
+      max-height: 150px;
+    }
+  }
+  .container.custom-bglogogiaidau {
+    background-color: #091c3e; /* Thay đổi màu theo ý muốn */
+    padding: 20px;
+  }
+  .container.custom-bglogogiaidauepl {
+    background-color: #3B9BCC; /* Thay đổi màu theo ý muốn */
+    padding: 20px;
+  }
+  .container.custom-bglogogiaidaullg {
+    background-color: #921e7f; /* Thay đổi màu theo ý muốn */
+    padding: 20px;
+  }
+  
+  .header {
+    background-color: transparent;
+    padding: 20px;
+    color: white;
+  }
+  
+  .header h1 {
+    font-family: PremierSans-Heavy, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .header img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
+  @media (min-width: 768px) {
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+  
+    .header h1 {
+      font-size: 3rem;
+      margin-left: 20px;
+    }
+  
+    .header img {
+      max-width: 150px;
+      max-height: 150px;
+    }
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 80px;
+    left: -280px;
+    width: 280px;
+    height: calc(100% - 80px);
+    background-color: #f8f9fa;
+    transition: all 0.5s ease;
+    z-index: 9999;
+}
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  .close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .content {
+    transition: all 0.2s ease;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+  
+  .content.active {
+    padding-left: 140px;
+    margin-left: 140px;
+  }
+  @media (max-width: 650px) {
+    .sidebar {
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    
+    .content {
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+}
+.sidebar.active2 {
+  left: 0;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #000;
+  font-weight: bold;
+}
+  
+
+
+.card-text {
+  text-align: justify;
+}
+
+.card-text h5 {
+  margin-bottom: 20px;
+}
+
+.card-text center {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.custom-bgbody {
+  background-color: #e7e6ed; /* Thay đổi màu theo ý muốn */
+}
+
+  .navbar-toggler {
+      border: none;
+
+  }
+  .table-bordered td,
+  .table-bordered th {
+    border-radius: 10px;
+  }
+  .border {
+    border-radius: 10px;
+  }
+  
+  .custom-bgtable {
+    background-color: #dcdbe1; /* Thay đổi màu theo ý muốn */
+  }
+  body {
+    background-color: #f1f1f1; /* Màu nền cho body */
+  }
+
+  .content-container {
+    max-width: 800px; /* Điều chỉnh kích thước container */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Màu nền cho content */
+    border-radius: 10px; /* Điều chỉnh độ cong của góc */
+  }
+  .custom-bggtcn {
+    background-color: rgb(255, 248, 248); /* Thay đổi màu theo ý muốn */
+  }
+  .container{
+    border-radius: 15px;
+ 
+  }
+  .footer-ct {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .column {
+    width: 25%;
+  }
+  
+  .column img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .column p {
+    margin: 5px 0;
+  }
+  .custom-bgft{
+    background-color:  #091c3e; /* Thay đổi màu theo ý muốn */
+  }
+
+.custom-ctn{
+  background-color: rgb(255, 248, 248); 
+}
+.border-dark {
+  border: 1px solid rgb(187, 11, 11);
+}
+
+
+  /* Custom CSS */
+  @media (min-width: 768px) {
+    .col-md-4 {
+      margin-bottom: 60px; /* Increase the spacing between columns */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .col-md-4 {
+      margin-bottom: 100px; /* Adjust the spacing on smaller screens */
+    }
+  }
+  .article p{
+
+text-align: justify;
+
+  }
+
+  .navbar-nav {
+    padding-top: 20px; /* Khoảng cách từ đỉnh sidebar */
+}
+
+.navbar-nav li {
+    margin-bottom: 30px; /* Khoảng cách giữa các mục */
+
+    
+}
+
+.navbar-nav a {
+
+  
+}
+
+
+
+  
+

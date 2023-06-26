@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligue 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jQuerry.js">
+    <link rel="stylesheet" href="script.js">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+ 
+</head>
+<style>
+ 
+   .bordered {
+ border: 1px solid black;
+}
+
+/* CSS cho việc ẩn các đường kẻ trong responsive layout */
+@media (max-width: 768px) {
+ .bordered {
+   border: none;
+ }
+}
+</style>
+<body class="custom-bgbody">
+  <nav id="navbar" class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="navbar-brand-wrapper d-flex">
+        <button id="toggleSidebarBtn" class="navbar-toggler navbar-toggler-left" type="button" aria-expanded="false" aria-label="">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="">
+            <img src="images/logowweb.png" alt="Logo" width="60px" height="60px" class="img-fluid">
+            <span class="fs-1 p-4" style="color: white;">Football News</span>
+        </a>
+
+    </div>
+
+    
+</nav>
+
+  
+
+<div class="sidebar" id="sidebar">
+   
+  <ul class="navbar-nav">
+      <center>
+    <li class="nav-item">
+    
+      <a class="nav-link" href="index.html">Trang chủ</a>
+
+    </li>
+  </center>   
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="epl.html">Premier League</a>
+    </li>
+  </center>   
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="laliga.html">LaLiga</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="L1.html">Ligue1</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="seriea.html">Serie A</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="bundes.html">Bundesliga</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="Login.html">Đăng Nhập</a>
+    </li>
+  </center>
+  </ul>
+</div>
+
+
+<div class="content mt-2">
+    
+
+  
+  <div class="container mt-12 custom-bglogogiaidau">
+    <nav class="header">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-1">
+          <center><img src="images/league1/logo.png" width="100" height="150" alt="logo"></center>
+        </div>
+        <div class="col-12 col-md-11 text-center">
+          <h1 class="display-3 fw-bolder" style="font-family: PremierSans-Heavy,Arial,Helvetica Neue,Helvetica,sans-serif; color: white;">LIGUE 1</h1>
+        </div>
+      </div>
+    </nav>  
+  </div>
+  
+    <div class="container mt-3 custom-ctn"  >
+        <table class="tbl-rank table table-rounded">
+            <thead class="bg-light">
+                <tr >
+                    <th><span class="team-name">Hạng</span>
+                      <span class="team-name-abbreviation">H</span></th>
+                    <th><span class="team-name">Đội</span>
+                      <span class="team-name-abbreviation">Đ</span></th>
+                    <th class="text-center"><span class="team-name">Trận</span>
+                      <span class="team-name-abbreviation">T</span></th>
+                    <th class="text-center"><span class="team-name">Thắng</span>
+                      <span class="team-name-abbreviation">T</span></th>
+                    <th class="text-center"><span class="team-name">Hòa</span>
+                      <span class="team-name-abbreviation">H</span></th>
+                    <th class="text-center"><span class="team-name">Bại</span>
+                      <span class="team-name-abbreviation">B</span></th>
+                    <th class="text-center"><span class="team-name">Hiệu Số</span>
+                        <span class="team-name-abbreviation">HS</span></th>
+                    <th class="text-center"><span class="team-name">Điểm</span>
+                      <span class="team-name-abbreviation">Đ</span</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white table-group-divider">
+                <tr class="table-success">
+                    <td style="position: relative; padding-left: 20px;">
+                      <span class="value" >1</span>
+                      <span class="status status-dot"></span>
+                    </td>
+                    <td>
+                        <img class="logo-rank" src="images//league1/teamlogo/PSG.png" alt="">
+                        <span class="team-name">Paris Saint-Germain</span>
+                        <span class="team-name-abbreviation">PSG</span>
+                    </td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">28</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">+61</td>
+                    <td class="text-center">89</td>   
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >2</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td>
+                        <img src="images/league1/teamlogo/LENS.png" alt="">
+                        <span class="team-name">RC LENS</span>
+                        <span class="team-name-abbreviation">LEN</span>
+                    </td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">26</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">+45</td>
+                    <td class="text-center">84</td>
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >3</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/league1/teamlogo/OM.png" alt="">
+                        <span class="team-name">Olympique Marseille</span>
+                        <span class="team-name-abbreviation">OM</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">23</td>
+                        <td class="text-center">6</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">+15</td>
+                        <td class="text-center">75</td>
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >4</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/league1/teamlogo/Stade Rennais.png" alt="">
+                        <span class="team-name">Stade Rennais</span>
+                        <span class="team-name-abbreviation">RENNES</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">19</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">5</td>
+                        <td class="text-center">+35</td>
+                        <td class="text-center">71</td>
+                </tr>
+                <tr class="table-warning">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >5</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/league1/teamlogo/LOSC.png" alt="">
+                        <span class="team-name"></span>Lille Olympique</span>
+                        <span class="team-name-abbreviation">LOSC</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">19</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">+28</td>
+                        <td class="text-center">67</td>
+                </tr>
+                <tr class="table-warning">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >6</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/league1/teamlogo/asmonaco.png" alt="">
+                        <span class="team-name">AS MONACO</span>
+                        <span class="team-name-abbreviation">AMO</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">18</td>
+                        <td class="text-center">8</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">+19</td>
+                        <td class="text-center">62</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >7</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/league1/teamlogo/OL.png" alt="">
+                        <span class="team-name">Olympique Lyon</span>
+                        <span class="team-name-abbreviation">OL</span></td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">18</td>
+                    <td class="text-center">7</td>
+                    <td class="text-center">13</td>
+                    <td class="text-center">+5</td>
+                    <td class="text-center">61</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >8</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/league1/teamlogo/Clemort.png" alt="">
+                        <span class="team-name">Clermont</span>
+                        <span class="team-name-abbreviation">CFA</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">18</td>
+                        <td class="text-center">6</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">+7</td>
+                        <td class="text-center">60</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >9</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/league1/teamlogo/nice.png" alt="">
+                        <span class="team-name">OGS NICE</span>
+                        <span class="team-name-abbreviation">NICE</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">+12</td>
+                        <td class="text-center">59</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >10</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/league1/teamlogo/lorient.png" alt="">
+                        <span class="team-name">FC LORIENT</span>
+                        <span class="team-name-abbreviation">LOR</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">7</td>
+                        <td class="text-center">16</td>
+                        <td class="text-center">+2</td>
+                        <td class="text-center">52</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >11</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images//league1/teamlogo/riems.png" alt="">
+                        <span class="team-name">REIMS
+                        </span>
+                        <span class="team-name-abbreviation">REI</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">11</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">-9</td>
+                        <td class="text-center">45</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >12</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                  <td> <img src="images/league1/teamlogo/mon.png" alt="">
+                      <span class="team-name">MONTPELLIER</span>
+                      <span class="team-name-abbreviation">MON</span></td>
+                      <td class="text-center">38</td>
+                      <td class="text-center">11</td>
+                      <td class="text-center">11</td>
+                      <td class="text-center">16</td>
+                      <td class="text-center">-9</td>
+                      <td class="text-center">44</td>
+              </tr>
+              <tr>
+                <td style="position: relative; padding-left: 20px;">
+                  <span class="value" >13</span>
+                  <span class="status status-dot"></span>
+                </td>
+                <td> <img src="images/league1/teamlogo/toul.png" alt="">
+                    <span class="team-name">TOULOUSE FC</span>
+                    <span class="team-name-abbreviation">TOU</span></td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">11</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">19</td>
+                    <td class="text-center">-27</td>
+                    <td class="text-center">41</td>
+            </tr>
+            <tr>
+              <td style="position: relative; padding-left: 20px;">
+                <span class="value" >14</span>
+                <span class="status status-dot"></span>
+              </td>
+              <td> <img src="images/league1/teamlogo/14.png" alt="">
+                  <span class="team-name">BREST</span>
+                  <span class="team-name-abbreviation">BRE</span></td>
+                  <td class="text-center">38</td>
+                  <td class="text-center">11</td>
+                  <td class="text-center">7</td>
+                  <td class="text-center">20</td>
+                  <td class="text-center">-13</td>
+                  <td class="text-center">40</td>
+          </tr>
+          <tr>
+            <td style="position: relative; padding-left: 20px;">
+              <span class="value" >15</span>
+              <span class="status status-dot"></span>
+            </td>
+            <td> <img src="images/league1/teamlogo/15.png" alt="">
+                <span class="team-name">STRASBOUG</span>
+                <span class="team-name-abbreviation">STA</span></td>
+                <td class="text-center">38</td>
+                <td class="text-center">11</td>
+                <td class="text-center">6</td>
+                <td class="text-center">21</td>
+                <td class="text-center">-34</td>
+                <td class="text-center">39</td>
+        </tr>
+        <tr>
+          <td style="position: relative; padding-left: 20px;">
+            <span class="value" >16</span>
+            <span class="status status-dot"></span>
+          </td>
+          <td> <img src="images/league1/teamlogo/16.png" alt="">
+              <span class="team-name">FC NANTES</span>
+              <span class="team-name-abbreviation">NAN</span></td>
+              <td class="text-center">38</td>
+              <td class="text-center">9</td>
+              <td class="text-center">11</td>
+              <td class="text-center">18</td>
+              <td class="text-center">-30</td>
+              <td class="text-center">38</td>
+      </tr>
+
+
+      <tr class="table-danger">
+        <td style="position: relative; padding-left: 20px;">
+          <span class="value" >17</span>
+          <span class="status status-dot"></span>
+        </td>
+        <td> <img src="images/league1/teamlogo/17.png" alt="">
+            <span class="team-name">AJ AUXERRE</span>
+            <span class="team-name-abbreviation">AUX</span></td>
+            <td class="text-center">38</td>
+            <td class="text-center">8</td>
+            <td class="text-center">12</td>
+            <td class="text-center">18</td>
+            <td class="text-center">-23</td>
+            <td class="text-center">36</td>
+    </tr>
+
+
+    <tr class="table-danger">
+      <td style="position: relative; padding-left: 20px;">
+        <span class="value" >18</span>
+        <span class="status status-dot"></span>
+      </td>
+      <td> <img src="images/league1/teamlogo/18.png" alt="">
+          <span class="team-name">AC AJACCIO</span>
+          <span class="team-name-abbreviation">AJO</span></td>
+          <td class="text-center">38</td>
+          <td class="text-center">9</td>
+          <td class="text-center">7</td>
+          <td class="text-center">22</td>
+          <td class="text-center">-17</td>
+          <td class="text-center">34</td>
+  </tr>
+  <tr class="table-danger">
+    <td style="position: relative; padding-left: 20px;">
+      <span class="value" >19</span>
+      <span class="status status-dot"></span>
+    </td>
+    <td> <img src="images/league1/teamlogo/19.png"  alt="">
+        <span class="team-name">TROYES</span>
+        <span class="team-name-abbreviation">TRO</span></td>
+        <td class="text-center">38</td>
+        <td class="text-center">7</td>
+        <td class="text-center">10</td>
+        <td class="text-center">21</td>
+        <td class="text-center">-30</td>
+        <td class="text-center">31</td>
+</tr>
+<tr class="table-danger">
+  <td style="position: relative; padding-left: 20px;">
+                  <span class="value" >20</span>
+                  <span class="status status-dot"></span>
+                </td>
+  <td> <img src="images/league1/teamlogo/20.png" alt="">
+      <span class="team-name">ANGERS SCO</span>
+      <span class="team-name-abbreviation">ANG</span></td>
+      <td class="text-center">38</td>
+      <td class="text-center">6</td>
+      <td class="text-center">7</td>
+      <td class="text-center">25</td>
+      <td class="text-center">-37</td>
+      <td class="text-center">25</td>
+</tr>
+            </tbody>
+        </table>
+    </div>
+
+
+<div class="container">
+  <div class="row ">
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Ghi Bàn</h2>
+      <table class="table table-striped  mt-2">
+        <thead class="">
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Kylian <br>
+                    Mpabbe</h3>
+                    <img src="images/league1/cauthu/phap.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="images/league1/cauthu/Rua.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="images/league1/teamlogo/PSG.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Kylian Mpabbé</span>
+                <br>
+                <span class="team-nameunder">Paris Saint-Germain</span>
+              </span>
+            </td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="images/league1/teamlogo/OL.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Alexander Lacazette</span>
+                <br>
+                <span class="team-nameunder">Olympique Lyon</span>
+              </span>
+            </td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="images/league1/teamlogo/LOSC.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Jonathan David</span>
+                <br>
+                <span class="team-nameunder">LOSC Lille</span>
+              </span>
+            </td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="images/league1/teamlogo/LENS.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Loiis Openda</span>
+                <br>
+                <span class="team-nameunder">RC LENS</span>
+              </span>
+            </td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="images/league1/teamlogo/riems.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Florain Balogun</span>
+                <br>
+                <span class="team-nameunder">Stade Rennais</span>
+              </span>
+            </td>
+            <td>24</td>
+          </tr>
+    
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Kiến Tạo</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Lionel <br>
+                    Messi</h3>
+                    <img src="images/league1/cauthu/argen.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="images/league1/cauthu/GOAT.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="images/league1/teamlogo/PSG.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Lionel Messi</span>
+                <br>
+                <span class="team-nameunder">Paris Saint-Germain</span>
+              </span>
+            </td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="images/league1/teamlogo/OM.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Jonathan Clauss</span>
+                <br>
+                <span class="team-nameunder">Olympique Marseille</span>
+              </span>
+            </td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="images/league1/teamlogo/PSG.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Neymar JR</span>
+                <br>
+                <span class="team-nameunder">Paris Saint-Germain</span>
+              </span>
+            </td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="images/league1/teamlogo/LOSC.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Rémy Cabelle</span>
+                <br>
+                <span class="team-nameunder">LOSC Lille</span>
+              </span>
+            </td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="images/league1/teamlogo/LENS.png" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">
+                  Florian Sotoca</span>
+                <br>
+                <span class="team-nameunder">RC LENS</span>
+              </span>
+            </td>
+            <td>9</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- vua phá lưới -->
+
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+
+
+    <center><h1 class="p-4">Vua Phá Lưới</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Kylian Mpabbé<br></span></center>
+    <center> <img src="images/league1/teamlogo/PSG.png" width="45px" height="45px" alt="">
+      <span class="team-name">Paris Saint-Germain</span>
+      <span class="team-name-abbreviation">PSG</span></center>
+    <center><br><img  class="img-fluid" src="images/league1/cauthu/vpl.jpg" width="1200" height="auto"></center>
+    
+    
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- vua phá luoi -->
+
+<!-- ?vua kien tạo -->
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+
+
+    <center><h1 class="p-4">Vua Kiến Tạo</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Lionel Messi<br></span></center>
+    <center> <img src="images/league1/teamlogo/PSG.png" width="45px" height="45px" alt="">
+      <span class="team-name">Paris Saint-Germain</span>
+      <span class="team-name-abbreviation">PSG</span></center>
+    <center><br><img  class="img-fluid" src="images/league1/cauthu/vuakientao.webp" width="auto" height="auto"></center>
+    
+    
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- vua kien tao -->
+
+
+
+
+
+
+
+
+
+
+<!-- Cầu thủ trẻ xuất sắc nhất -->
+
+
+
+<!-- Cầu thủ xuất sắc nhất giải đấu -->
+
+
+
+
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+    <center><h1 class="p-4">Cầu Thủ Xuất Sắc Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Kylian Mpabbé<br></span></center>
+    <center> <img src="images/league1/teamlogo/PSG.png" width="45px" height="45px" alt="">
+      <span class="team-name">Paris Saint-Germain</span>
+      <span class="team-name-abbreviation">PSG</span></center>
+    <center><br><img  class="img-fluid" src="images/league1/cauthu/ctxs.jpg" width="auto" height="auto"></center>
+    
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</center>
+
+</div>
+</div>
+<!-- cau thu xuat sac nhat mua -->
+
+
+<div class="container  mt-4">
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+    <center><h1 class="p-4">Huấn Luyện Viên Xuất Sắc Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Christophe Galtier<br></span></center>
+    <center> <img src="images/league1/teamlogo/PSG.png" width="45px" height="45px" alt="">
+      <span class="team-name">Paris Saint-Germain</span>
+      <span class="team-name-abbreviation">PSG</span></center>
+    <center><br><img  class="img-fluid" src="images/league1/cauthu/hlv.jpg" width="auto" height="auto"></center>
+    
+     
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="container mt-4">
+  <div class="row ">
+    <div class="col-lg-12">
+      <div class="card custom-bggtcn">
+        <div class="card-body">
+         <center><h2 class="card-title mt-3">Paris Saint-Germain - Nhà vô địch bóng đá Pháp</h2></center> 
+         
+          <div class="card-text mt-5">
+            <h5>
+              Trong một mùa giải đầy nhiều kỷ lục và thành công của Paris Saint-Germain (PSG) ở Ligue 1, đội bóng đã trải qua một hành trình vô địch không mấy khó khăn. Dù đối mặt với một tiền vệ yếu kém, nhưng sự tỏa sáng của Lionel Messi và Kylian Mbappé, cùng với sự bùng cháy trước chấn thương của Neymar, đã giúp PSG duy trì vị trí đầu bảng và giành được chức vô địch Ligue 1.<br>
+            </h5>
+            <center><img class="img-fluid" src="https://cdn.tuoitre.vn/thumb_w/730/471584752817336320/2023/6/15/mbappe-1686798773007557932938.jpg" width="800" height="561"></center>
+            <h5>
+              Mùa giải bắt đầu với nhiều kỳ vọng rằng PSG sẽ tiếp tục thống trị Ligue 1 như các mùa trước. Tuy nhiên, đội bóng đã gặp một số khó khăn trong tuyến giữa khi mất đi một số cầu thủ chủ chốt. Điều này đã dẫn đến một tiền vệ yếu kém trong nhiều trận đấu, khiến PSG phải tìm cách thích nghi và tìm ra giải pháp. <br>
+            </h5>
+            <center><img class="img-fluid" src="https://vcdn-thethao.vnecdn.net/2021/08/30/000-9LV7RY-1630286248-jpeg-8883-1630342351.jpg" width="800" height="561"></center>
+            <h5>
+              Tuy vậy, sự tỏa sáng của Lionel Messi và Kylian Mbappé đã lấp đầy khoảng trống trong tuyến giữa. Messi, với tài năng và kinh nghiệm vô song, đã trở thành trung tâm của sự sáng tạo trong đội hình. Anh đã tạo ra nhiều đường chuyền thông minh và ghi được những bàn thắng quan trọng. Sự cống hiến của Mbappé cũng không thể bỏ qua. Tốc độ và kỹ thuật của anh đã tạo ra sự kinh ngạc trong hàng thủ đối phương và giúp anh ghi được nhiều bàn thắng quan trọng. <br>
+            </h5>
+            <center><img class="img-fluid" src="https://baobariavungtau.com.vn/dataimages/202202/original/images1700645_mbappe_lai_mot_lan_nua_toa_sang_de_mang_ve_chien_thang_cho_psg.jpg" width="800" height="561"></center>
+            <h5>
+              Dù vậy, một biến cố không mong đợi đã xảy ra giữa mùa giải khi Neymar gặp chấn thương. Mất đi sự bùng cháy và tài năng của Neymar là một mất mát lớn đối với PSG. Tuy nhiên, những cầu thủ khác đã tự đứng lên và đóng góp mạnh mẽ để bù đắp sự vắng mặt của anh.<br>
+            </h5>
+            <center><img class="img-fluid" src="data:image/jpeg;base64,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" width="800" height="561"></center>
+            <h5>
+              Với sự đoàn kết và tinh thần chiến đấu không ngừng, PSG đã vượt qua mọi thách thức và duy trì sự ổn định trong suốt mùa giải. Nhờ vào sự tỏa sáng của Messi, Mbappé và tinh thần đồng đội, PSG đã giữ vững vị trí đầu bảng và giành chức vô địch Ligue 1. <br>
+            </h5>
+            <center><img class="img-fluid" src="https://vcdn-thethao.vnecdn.net/2022/08/01/diapo-tdc-43-jpeg-6129-1659311949.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=4w-VI3couZ__e0VfX6YMPw" width="800" height="561"></center>
+            <h5>
+              Mùa giải vô địch Ligue 1 nhàn nhã của PSG là một minh chứng cho sự bền bỉ và đẳng cấp của đội bóng. Dù mất đi một số cầu thủ quan trọng và gặp khó khăn trong tuyến giữa, sự tỏa sáng của Messi và Mbappé, cùng với tinh thần và sự đoàn kết của đội, đã đảm bảo rằng PSG vẫn là đội bóng mạnh mẽ nhất và xứng đáng với danh hiệu vô địch Ligue 1.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="container-fluid  custom-bgft">
+  <div class="container custom-bgft mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <center>
+          <a href="">
+            <img class="img-fluid " src="images/footer/epllpgofooter.png" alt="Logo 1" width="200px" height="200px">
+          </a>
+        </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <a href="https://www.premierleague.com/">
+            <img class="img-fluid" src="images/logowweb.png" alt="Logo 2" width="150px" height="150px">
+          </a>
+        </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <a href="https://www.uefa.com/">
+            <img class="img-fluid" src="images/footer/uefa.png" alt="Logo 3" width="150px" height="150px">
+          </a>
+        </center>
+      </div>
+      <div class="col-12 mt-4"> <!-- Added div -->
+        <center> <p style="color: aliceblue;">bản quyền thuộc nhóm.....</p> </center>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</div>
+
+
+
+
+
+<script>
+var toggleSidebarBtn = document.getElementById("toggleSidebarBtn");
+var sidebar = document.getElementById("sidebar");
+var content = document.querySelector(".content");
+
+toggleSidebarBtn.addEventListener("click", function () {
+    if (window.innerWidth > 1000) {
+        sidebar.classList.toggle("active");
+        content.classList.toggle("active");
+    } else {
+        sidebar.classList.toggle("active2");
+    }
+});
+
+window.addEventListener("resize", function () {
+   
+        sidebar.classList.remove("active2");
+  
+        sidebar.classList.remove("active");
+        content.classList.remove("active");
+ 
+});
+</script>
+<script>
+
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

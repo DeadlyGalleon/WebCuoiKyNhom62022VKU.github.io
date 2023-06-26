@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Đăng Nhập</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylebody.css">
+</head>
+<body class="custom-bgbody">
+  <nav id="navbar" class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="navbar-brand-wrapper d-flex">
+      <button id="toggleSidebarBtn" class="navbar-toggler navbar-toggler-left" type="button" aria-expanded="false" aria-label="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="">
+        <img src="images/logowweb.png" alt="Logo" width="60px" height="60px" class="img-fluid">
+        <span class="fs-1 p-4" style="color: white;">Football News</span>
+      </a>
+    </div>
+  </nav>
+
+
+
+  <div class="sidebar" id="sidebar">
+   
+    <ul class="navbar-nav">
+        <center>
+      <li class="nav-item">
+      
+        <a class="nav-link" href="index.html">Trang chủ</a>
+ 
+      </li>
+    </center>   
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="epl.html">Premier League</a>
+      </li>
+    </center>   
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="laliga.html">LaLiga</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="L1.html">Ligue1</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="seriea.html">Serie A</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="bundes.html">Bundesliga</a>
+      </li>
+    </center>
+    <center>
+      <li class="nav-item">
+        <a class="nav-link" href="Login.html">Đăng Nhập</a>
+      </li>
+    </center>
+    </ul>
+  </div>
+
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section">Đăng Nhập</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5">
+          <div class="wrap">
+            <div class="login-wrap p-4 p-md-5">
+              <div class="d-flex">
+                <div class="w-100">
+                  <h3 class="mb-4">Đăng Nhập</h3>
+                </div>
+                <div class="w-100"></div>
+              </div>
+              <form id="loginForm" action="#" class="signin-form">
+                <div class="form-group mt-3">
+                    <label for="username">Tài Khoản:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mật Khẩu:</label>
+                    <input type="password" id="password" required>
+                  <span toggle="#password-field" onclick="togglePassword()"></span>
+                </div>
+                <div class="form-group">    
+                  <button type="submit" class="form-control btn btn-primary rounded submit px-3">Đăng Nhập</button>
+                </div>
+                <div class="form-group d-md-flex">
+                  <div class="w-50 text-left"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var toggleSidebarBtn = document.getElementById("toggleSidebarBtn");
+    var sidebar = document.getElementById("sidebar");
+    var content = document.querySelector(".content");
+
+    toggleSidebarBtn.addEventListener("click", function () {
+      if (window.innerWidth > 1000) {
+        sidebar.classList.toggle("active");
+        content.classList.toggle("active");
+      } else {
+        sidebar.classList.toggle("active2");
+      }
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Ngăn chặn form gửi yêu cầu mặc định
+      
+      // Lấy giá trị tên đăng nhập và mật khẩu từ form
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      
+      // Kiểm tra thông tin tài khoản và mật khẩu
+      if (username === "admin" && password === "123456") {
+        // Nếu thông tin đăng nhập hợp lệ, chuyển hướng sang trang index.html
+        window.location.href = "index.html";
+      } else {
+        // Thông báo khi thông tin đăng nhập không hợp lệ
+        alert("Thông tin đăng nhập không chính xác. Vui lòng thử lại.");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jQuerry.js">
+    <link rel="stylesheet" href="script.js">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+ 
+</head>
+<style>
+ 
+   .bordered {
+ border: 1px solid black;
+}
+
+/* CSS cho việc ẩn các đường kẻ trong responsive layout */
+@media (max-width: 768px) {
+ .bordered {
+   border: none;
+ }
+}
+</style>
+<body class="custom-bgbody">
+  <nav id="navbar" class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="navbar-brand-wrapper d-flex">
+        <button id="toggleSidebarBtn" class="navbar-toggler navbar-toggler-left" type="button" aria-expanded="false" aria-label="">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logowweb.png" alt="Logo" width="60px" height="60px" class="img-fluid">
+            <span class="fs-1 p-4" style="color: white;">Football News</span>
+        </a>
+
+    </div>
+
+    
+</nav>
+
+
+<div class="sidebar" id="sidebar">
+   
+  <ul class="navbar-nav">
+      <center>
+    <li class="nav-item">
+    
+      <a class="nav-link" href="index.html">Trang chủ</a>
+
+    </li>
+  </center>   
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="epl.html">Premier League</a>
+    </li>
+  </center>   
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="laliga.html">LaLiga</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="L1.html">Ligue1</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="seriea.html">Serie A</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="bundes.html">Bundesliga</a>
+    </li>
+  </center>
+  <center>
+    <li class="nav-item">
+      <a class="nav-link" href="Login.html">Đăng Nhập</a>
+    </li>
+  </center>
+  </ul>
+</div>
+
+<div class="content mt-2">
+    
+
+  
+  <div class="container mt-12 custom-bglogogiaidauepl">
+    <nav class="header">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-1">
+          <center><img src="images/epl/logo.png" width="100" height="100" alt="logo"></center>
+        </div>
+        <div class="col-12 col-md-11 text-center">
+          <h1 class="display-3 fw-bolder" style="font-family: PremierSans-Heavy,Arial,Helvetica Neue,Helvetica,sans-serif; color: white;">Premier League</h1>
+        </div>
+      </div>
+    </nav>  
+  </div>
+  
+
+
+
+    <div class="container mt-3 custom-ctn"  >
+        <table class="tbl-rank table table-rounded">
+            <thead class="bg-light">
+                <tr >
+                    <th><span class="team-name">Hạng</span>
+                      <span class="team-name-abbreviation">H</span></th>
+                    <th><span class="team-name">Đội</span>
+                      <span class="team-name-abbreviation">Đ</span></th>
+                    <th class="text-center"><span class="team-name">Trận</span>
+                      <span class="team-name-abbreviation">T</span></th>
+                    <th class="text-center"><span class="team-name">Thắng</span>
+                      <span class="team-name-abbreviation">T</span></th>
+                    <th class="text-center"><span class="team-name">Hòa</span>
+                      <span class="team-name-abbreviation">H</span></th>
+                    <th class="text-center"><span class="team-name">Bại</span>
+                      <span class="team-name-abbreviation">B</span></th>
+                    <th class="text-center"><span class="team-name">Hiệu Số</span>
+                        <span class="team-name-abbreviation">HS</span></th>
+                    <th class="text-center"><span class="team-name">Điểm</span>
+                      <span class="team-name-abbreviation">Đ</span</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white table-group-divider">
+                <tr class="table-success">
+                    <td style="position: relative; padding-left: 20px;">
+                      <span class="value" >1</span>
+                      <span class="status status-dot"></span>
+                    </td>
+                    <td>
+                        <img class="logo-rank" src="images/epl/logo-manchester-city.webp" alt="">
+                        <span class="team-name">Manchester City</span>
+                        <span class="team-name-abbreviation">MCI</span>
+                    </td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">28</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">+61</td>
+                    <td class="text-center">89</td>   
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >2</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td>
+                        <img src="https://resources.premierleague.com/premierleague/badges/rb/t3.svg" alt="">
+                        <span class="team-name">Arsenal</span>
+                        <span class="team-name-abbreviation">ARS</span>
+                    </td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">26</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">+45</td>
+                    <td class="text-center">84</td>
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >3</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="	https://resources.premierleague.com/premierleague/badges/rb/t1.svg" alt="">
+                        <span class="team-name">Manchester United</span>
+                        <span class="team-name-abbreviation">MUN</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">23</td>
+                        <td class="text-center">6</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">+15</td>
+                        <td class="text-center">75</td>
+                </tr>
+                <tr class="table-success">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >4</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://resources.premierleague.com/premierleague/badges/rb/t4.svg" alt="">
+                        <span class="team-name">Newcastle United</span>
+                        <span class="team-name-abbreviation">NEW</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">19</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">5</td>
+                        <td class="text-center">+35</td>
+                        <td class="text-center">71</td>
+                </tr>
+                <tr class="table-warning">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >5</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://resources.premierleague.com/premierleague/badges/rb/t14.svg" alt="">
+                        <span class="team-name">Liverpool</span>
+                        <span class="team-name-abbreviation">LIV</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">19</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">+28</td>
+                        <td class="text-center">67</td>
+                </tr>
+                <tr class="table-warning">
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >6</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://resources.premierleague.com/premierleague/badges/rb/t36.svg" alt="">
+                        <span class="team-name">Brighton & Hove Albion</span>
+                        <span class="team-name-abbreviation">BHA</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">18</td>
+                        <td class="text-center">8</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">+19</td>
+                        <td class="text-center">62</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >7</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="	https://resources.premierleague.com/premierleague/badges/rb/t7.svg" alt="">
+                        <span class="team-name">Aston Villa</span>
+                        <span class="team-name-abbreviation">AVL</span></td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">18</td>
+                    <td class="text-center">7</td>
+                    <td class="text-center">13</td>
+                    <td class="text-center">+5</td>
+                    <td class="text-center">61</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >8</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="https://resources.premierleague.com/premierleague/badges/rb/t6.svg" alt="">
+                        <span class="team-name">Tottenham Hotspur</span>
+                        <span class="team-name-abbreviation">TOT</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">18</td>
+                        <td class="text-center">6</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">+7</td>
+                        <td class="text-center">60</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >9</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/epl/teamlogo/BRE.svg" alt="">
+                        <span class="team-name">Brentford</span>
+                        <span class="team-name-abbreviation">BRE</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">+12</td>
+                        <td class="text-center">59</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >10</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/epl/teamlogo/FUL.svg" alt="">
+                        <span class="team-name">Fulham</span>
+                        <span class="team-name-abbreviation">FUL</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">7</td>
+                        <td class="text-center">16</td>
+                        <td class="text-center">+2</td>
+                        <td class="text-center">52</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >11</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                    <td> <img src="images/epl/teamlogo/CRY.svg" alt="">
+                        <span class="team-name">Crystal Palace
+                        </span>
+                        <span class="team-name-abbreviation">CRY</span></td>
+                        <td class="text-center">38</td>
+                        <td class="text-center">11</td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">-9</td>
+                        <td class="text-center">45</td>
+                </tr>
+                <tr>
+                  <td style="position: relative; padding-left: 20px;">
+                    <span class="value" >12</span>
+                    <span class="status status-dot"></span>
+                  </td>
+                  <td> <img src="images/epl/teamlogo/CHE.svg" alt="">
+                      <span class="team-name">Chelsea</span>
+                      <span class="team-name-abbreviation">CHE</span></td>
+                      <td class="text-center">38</td>
+                      <td class="text-center">11</td>
+                      <td class="text-center">11</td>
+                      <td class="text-center">16</td>
+                      <td class="text-center">-9</td>
+                      <td class="text-center">44</td>
+              </tr>
+              <tr>
+                <td style="position: relative; padding-left: 20px;">
+                  <span class="value" >13</span>
+                  <span class="status status-dot"></span>
+                </td>
+                <td> <img src="images/epl/teamlogo/WOL.svg" alt="">
+                    <span class="team-name">Wolverhampton Wanderers</span>
+                    <span class="team-name-abbreviation">WOL</span></td>
+                    <td class="text-center">38</td>
+                    <td class="text-center">11</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">19</td>
+                    <td class="text-center">-27</td>
+                    <td class="text-center">41</td>
+            </tr>
+            <tr>
+              <td style="position: relative; padding-left: 20px;">
+                <span class="value" >14</span>
+                <span class="status status-dot"></span>
+              </td>
+              <td> <img src="images/epl/teamlogo/WHU.svg" alt="">
+                  <span class="team-name">West Ham United</span>
+                  <span class="team-name-abbreviation">WHU</span></td>
+                  <td class="text-center">38</td>
+                  <td class="text-center">11</td>
+                  <td class="text-center">7</td>
+                  <td class="text-center">20</td>
+                  <td class="text-center">-13</td>
+                  <td class="text-center">40</td>
+          </tr>
+          <tr>
+            <td style="position: relative; padding-left: 20px;">
+              <span class="value" >15</span>
+              <span class="status status-dot"></span>
+            </td>
+            <td> <img src="images/epl/teamlogo/BOU.svg" alt="">
+                <span class="team-name">AFC Bournemouth</span>
+                <span class="team-name-abbreviation">BOU</span></td>
+                <td class="text-center">38</td>
+                <td class="text-center">11</td>
+                <td class="text-center">6</td>
+                <td class="text-center">21</td>
+                <td class="text-center">-34</td>
+                <td class="text-center">39</td>
+        </tr>
+        <tr>
+          <td style="position: relative; padding-left: 20px;">
+            <span class="value" >16</span>
+            <span class="status status-dot"></span>
+          </td>
+          <td> <img src="images/epl/teamlogo/NFO.svg" alt="">
+              <span class="team-name">Nottingham Forest</span>
+              <span class="team-name-abbreviation">NFO</span></td>
+              <td class="text-center">38</td>
+              <td class="text-center">9</td>
+              <td class="text-center">11</td>
+              <td class="text-center">18</td>
+              <td class="text-center">-30</td>
+              <td class="text-center">38</td>
+      </tr>
+      <tr>
+        <td style="position: relative; padding-left: 20px;">
+          <span class="value" >17</span>
+          <span class="status status-dot"></span>
+        </td>
+        <td> <img src="images/epl/teamlogo/EVE.svg" alt="">
+            <span class="team-name">Everton</span>
+            <span class="team-name-abbreviation">EVE</span></td>
+            <td class="text-center">38</td>
+            <td class="text-center">8</td>
+            <td class="text-center">12</td>
+            <td class="text-center">18</td>
+            <td class="text-center">-23</td>
+            <td class="text-center">36</td>
+    </tr>
+    <tr class="table-danger">
+      <td style="position: relative; padding-left: 20px;">
+        <span class="value" >18</span>
+        <span class="status status-dot"></span>
+      </td>
+      <td> <img src="images/epl/teamlogo/LEI.svg" alt="">
+          <span class="team-name">Leicester City</span>
+          <span class="team-name-abbreviation">LEI</span></td>
+          <td class="text-center">38</td>
+          <td class="text-center">9</td>
+          <td class="text-center">7</td>
+          <td class="text-center">22</td>
+          <td class="text-center">-17</td>
+          <td class="text-center">34</td>
+  </tr>
+  <tr class="table-danger">
+    <td style="position: relative; padding-left: 20px;">
+      <span class="value" >19</span>
+      <span class="status status-dot"></span>
+    </td>
+    <td> <img src="images/epl/teamlogo/LEE.svg"  alt="">
+        <span class="team-name">Leeds United</span>
+        <span class="team-name-abbreviation">LEE</span></td>
+        <td class="text-center">38</td>
+        <td class="text-center">7</td>
+        <td class="text-center">10</td>
+        <td class="text-center">21</td>
+        <td class="text-center">-30</td>
+        <td class="text-center">31</td>
+</tr>
+<tr class="table-danger">
+  <td style="position: relative; padding-left: 20px;">
+                  <span class="value" >20</span>
+                  <span class="status status-dot"></span>
+                </td>
+  <td> <img src="images/epl/teamlogo/SOU.svg" alt="">
+      <span class="team-name">Southampton</span>
+      <span class="team-name-abbreviation">SOU</span></td>
+      <td class="text-center">38</td>
+      <td class="text-center">6</td>
+      <td class="text-center">7</td>
+      <td class="text-center">25</td>
+      <td class="text-center">-37</td>
+      <td class="text-center">25</td>
+</tr>
+            </tbody>
+        </table>
+    </div>
+
+
+<div class="container">
+  <div class="row ">
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Ghi Bàn</h2>
+      <table class="table table-striped  mt-2">
+        <thead class="">
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Erling <br>
+                    Haaland</h3>
+                    <img src="images/epl/CauThu/nauy.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="https://resources.premierleague.com/premierleague/photos/players/110x140/p223094.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="images/epl/logo-manchester-city.webp" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Erling Haaland</span>
+                <br>
+                <span class="team-nameunder">Manchester City</span>
+              </span>
+            </td>
+            <td>36</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="images/epl/teamlogo/TOT.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Harry Kane</span>
+                <br>
+                <span class="team-nameunder">Tottenham Hotspur</span>
+              </span>
+            </td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="images/epl/teamlogo/BRE.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Ivan Toney</span>
+                <br>
+                <span class="team-nameunder">Brentford</span>
+              </span>
+            </td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="images/epl/teamlogo/LIV.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Mohamed Salah</span>
+                <br>
+                <span class="team-nameunder">Liverpool</span>
+              </span>
+            </td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="images/epl/teamlogo/NEW.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Callum Wilson</span>
+                <br>
+                <span class="team-nameunder">Newcastle</span>
+              </span>
+            </td>
+            <td>18</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Kiến Tạo</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Kevin <br>
+                    De Bruyne</h3>
+                    <img src="images/epl/CauThu/Bi.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="images/epl/CauThu/kevin.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="images/epl/logo-manchester-city.webp" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Kevin De Bruyne</span>
+                <br>
+                <span class="team-nameunder">Manchester City</span>
+              </span>
+            </td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="images/epl/teamlogo/LIV.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Mohamed Salah</span>
+                <br>
+                <span class="team-nameunder">Liverpool</span>
+              </span>
+            </td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="images/epl/teamlogo/ARS.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Leandro Trossard</span>
+                <br>
+                <span class="team-nameunder">Arsenal</span>
+              </span>
+            </td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="images/epl/teamlogo/CRY.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Michael Olise</span>
+                <br>
+                <span class="team-nameunder">Crystal Palace</span>
+              </span>
+            </td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="images/epl/teamlogo/ARS.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">
+                  Bukayo Saka</span>
+                <br>
+                <span class="team-nameunder">Arsenal</span>
+              </span>
+            </td>
+            <td>11</td>
+          </tr>
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Đường Chuyền</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>Lewis <br>
+                    Dunk</h3>
+                    <img src="images/epl/CauThu/Anh.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="images/epl/CauThu/lewwis.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="images/epl/teamlogo/BHA.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Lewis Dunk</span>
+                <br>
+                <span class="team-nameunder">Brighton </span>
+              </span>
+            </td>
+            <td>3,208</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="images/epl/teamlogo/MC.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">
+                  Rodri</span>
+                <br>
+                <span class="team-nameunder">Arsenal</span>
+              </span>
+            </td>
+            <td>2,977</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="images/epl/teamlogo/LIV.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Virgil van Dijk</span>
+                <br>
+                <span class="team-nameunder">Liverpool</span>
+              </span>
+            </td>
+            <td>2,581</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="images/epl/teamlogo/ARS.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Gabriel Magalhães</span>
+                <br>
+                <span class="team-nameunder">Arsenal</span>
+              </span>
+            </td>
+            <td>2,396</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="images/epl/teamlogo/LIV.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">
+                  Trent Alexander-Arnold
+                 
+                  </span>
+                <br>
+                <span class="team-nameunder">Liverpool</span>
+              </span>
+            </td>
+            <td>2,309</td>
+          </tr>
+          
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-lg-6 col-md-6 custom-bggtcn rounded mt-4 border">
+      <h2 class="text-center mt-2">Giữ Sạch Lưới</h2>
+      <table class="table table-striped  mt-2">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <div class="container mt-12">
+                <div class="row bg-light">
+                  <div class="col-lg-6 col-md-6">
+                    <h3>David <br>
+                    De Gea</h3>
+                    <img src="images/epl/CauThu/tbn.png" alt="" width="60px" height="60px" class="img-fluid">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <img src="images/epl/CauThu/degea.png" alt="" width="auto" height="auto" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>    
+        <tbody class="table-group-divider">
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="images/epl/teamlogo/MU.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">David De Dea</span>
+                <br>
+                <span class="team-nameunder">Manchester United </span>
+              </span>
+            </td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="images/epl/teamlogo/LIV.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name"> Alisson</span>
+                <br>
+                <span class="team-nameunder">Liverpool</span>
+              </span>
+            </td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="images/epl/teamlogo/NEW.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">
+                  Nick Pope</span>
+                <br>
+                <span class="team-nameunder">Newcastle</span>
+              </span>
+            </td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="images/epl/teamlogo/ARS.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">Aaron Ramsdale</span>
+                <br>
+                <span class="team-nameunder">Arsenal</span>
+              </span>
+            </td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="images/epl/teamlogo/BRE.svg" width="45px" height="45px" alt="Logo" class="logo">
+              <span class="player-info">
+                <span class="player-name">
+                  
+David Raya
+                 
+                  </span>
+                <br>
+                <span class="team-nameunder">Brentford</span>
+              </span>
+            </td>
+            <td>11</td>
+          </tr>
+          
+          <!-- Add more rows for top goal scorers -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- vua phá lưới -->
+
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+
+
+    <center><h1 class="p-4">Vua Phá Lưới</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Erlling Halland<br></span></center>
+    <center> <img src="images/epl/logo-manchester-city.webp" width="45px" height="45px" alt="">
+      <span class="team-name">Manchester City</span>
+      <span class="team-name-abbreviation">MCI</span></center>
+    <center><br><img  class="img-fluid" src="images/epl/CauThu/vpl.jpg" width="auto" height="auto"></center>
+    
+    
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- vua phá luoi -->
+
+<!-- ?vua kien tạo -->
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+
+
+    <center><h1 class="p-4">Vua Kiến Tạo</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Kevin De Bruyne<br></span></center>
+    <center> <img src="images/epl/logo-manchester-city.webp" width="45px" height="45px" alt="">
+      <span class="team-name">Manchester City</span>
+      <span class="team-name-abbreviation">MCI</span></center>
+    <center><br><img  class="img-fluid" src="images/epl/CauThu/kevin_de_bruyne.jpg" width="auto" height="auto"></center>
+    
+    
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- vua kien tao -->
+
+
+
+
+
+
+<!-- Găng tay vàng -->
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+
+
+    <center><h1 class="p-4">Găng Tay Vàng</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">David De Gea<br></span></center>
+    <center><img src="	https://resources.premierleague.com/premierleague/badges/rb/t1.svg" width="45px" height="45px" alt="">
+      <span class="team-name">Manchester United</span>
+      <span class="team-name-abbreviation">MUN</span></center>
+    <center><br><img  class="img-fluid" src="images/epl/CauThu/gtv.jpg" width="auto" height="auto"></center>
+    
+    
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Cầu thủ trẻ xuất sắc nhất -->
+<div class="container  mt-4 ">
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+    <div class="card-body">
+    <center><h1 class="p-4">Cầu Thủ Trẻ Xuất Sắc Nhất</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Erlling Halland<br></span></center>
+    <center> <img src="images/epl/logo-manchester-city.webp" width="45px" height="45px" alt="">
+      <span class="team-name">Manchester City</span>
+      <span class="team-name-abbreviation">MCI</span></center>
+    <center><br><img  class="img-fluid" src="images/epl/CauThu/ctt.webp" width="1200" height="841"></center>
+    
+    
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Cầu thủ xuất sắc nhất giải đấu -->
+
+
+
+
+<div class="container  mt-4 ">
+  
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+    <center><h1 class="p-4">Cầu Thủ Xuất Sắc Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1" style="text-align: center;">Erlling Halland<br></span></center>
+    <center> <img src="images/epl/logo-manchester-city.webp" width="45px" height="45px" alt="">
+      <span class="team-name">Manchester City</span>
+      <span class="team-name-abbreviation">MCI</span></center>
+    <center><br><img  class="img-fluid" src="images/epl/CauThu/Erling-Haaland.jpg" width="1200" height="841"></center>
+    
+    
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</center>
+
+</div>
+</div>
+<!-- cau thu xuat sac nhat mua -->
+
+
+<div class="container  mt-4">
+  <div class="card custom-bggtcn">
+    <div class="card-body">
+    <center><h1 class="p-4">Huấn Luyện Viên Xuất Sắc Nhất Mùa</h1></center>
+    <br>
+    <center><span class="h1">Pep Guardiola<br></span></center>
+    <center>
+      <img src="images/epl/logo-manchester-city.webp" width="45px" height="45px" alt="">
+      <span class="team-name">Manchester City</span>
+      <span class="team-name-abbreviation">MCI</span>
+    </center>
+    <center>
+      <br>
+      <img class="img-fluid" src="images/epl/pep.webp" width="1200" height="841">
+    </center>
+
+     
+    <div class="info">
+      
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="container mt-4">
+  <div class="row ">
+    <div class="col-lg-12">
+      <div class="card custom-bggtcn">
+        <div class="card-body">
+         <center><h4 class="card-title mt-3">Manchester City - Nhà Vô Địch Bóng Đá Nước Anh</h4></center> 
+         
+          <div class="card-text mt-5">
+            <h5>
+              Mùa giải 2022/2023 đã chứng kiến một cuộc đua vô địch hấp dẫn và đầy kịch tính giữa hai đội bóng hàng đầu Premier League - Manchester City và Arsenal. Trong suốt mùa giải, hai đội đã tạo ra một cuộc đua căng thẳng, đưa người hâm mộ vào những cung bậc cảm xúc không thể tả. Từ những vòng đấu cuối cùng, cả hai đã xoay chuyển vị thế đối đầu với nhau, tạo ra một mùa giải đáng nhớ. <br>
+            </h5>
+            <center><img class="img-fluid" src="images/epl/baibao/hinh1.jpg" width="800" height="561"></center>
+            <h5>
+              Ngay từ đầu mùa, Arsenal đã cho thấy sức mạnh và tham vọng của mình khi giành chiến thắng liên tiếp. Với một đội hình trẻ và một huấn luyện viên trẻ trung như Mikel Arteta, Arsenal nhanh chóng chứng tỏ họ là ứng cử viên hàng đầu cho ngôi vô địch. Tuy nhiên, Man City cũng không phải là đối thủ dễ bị đánh bại. Với sự lãnh đạo của huấn luyện viên Pep Guardiola và một đội hình hùng hậu, Man City đã thể hiện một sự thăng hoa đáng kinh ngạc, đưa cuộc đua vô địch lên một tầm cao mới.  <br>
+            </h5>
+            <center><img class="img-fluid" src="images/epl/baibao/hình2.webp" width="800" height="561"></center>
+            <h5>
+              Khi mùa giải đi vào giai đoạn cuối, sự căng thẳng và sự cạnh tranh giữa hai đội bóng ngày càng gia tăng. Arsenal luôn dẫn đầu bảng xếp hạng, nhưng Man City không bỏ cuộc và tiếp tục bám đuổi một cách kiên nhẫn. Mỗi vòng đấu đều mang đến những trận đấu hấp dẫn và kịch tính, khi cả hai đội cố gắng tạo ra những cú đúp điểm quan trọng. <br>
+            </h5>
+            <center><img class="img-fluid" src="images/epl/baibao/hinh3.webp" width="800" height="561"></center>
+            <h5>
+              Tuy nhiên, đến những vòng cuối cùng, cuộc đua vô địch đã có sự thay đổi đáng kể. Manchester City đã trình diễn một chuỗi trận thắng liên tiếp, cùng với việc Arsenal gặp một số trận đấu không thành công, khiến khoảng cách giữa hai đội bóng bị trao đổi. Man City tỏ ra vượt trội với cách biệt điểm số đáng kể trước khi bước vào những vòng đấu cuối cùng. <br>
+            </h5>
+            <center><img class="img-fluid" src="images/epl/baibao/hinh4.jpg" width="800" height="561"></center>
+            <h5>
+              Với chiến thắng đó, Manchester City đã chính thức đăng quang ngôi vô địch Premier League mùa giải 2022/2023. Sự kịch tính và cuộc đua quyết liệt với Arsenal đã tạo nên một mùa giải đáng nhớ, đem lại niềm vui và thịnh vượng cho người hâm mộ Man City trên toàn thế giới. Đây là chức vô địch thứ năm của đội bóng này trong vòng chưa đầy một thập kỷ, chứng tỏ sự ổn định và sức mạnh của câu lạc bộ. <br>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="container-fluid  custom-bgft">
+  <div class="container custom-bgft mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <center>
+          <a href="https://www.premierleague.com/">
+            <img class="img-fluid " src="images/footer/epllpgofooter.png" alt="Logo 1" width="200px" height="200px">
+          </a>
+        </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <a href="index.html">
+            <img class="img-fluid" src="images/logowweb.png" alt="Logo 2" width="150px" height="150px">
+          </a>
+        </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <a href="https://www.uefa.com/">
+            <img class="img-fluid" src="images/footer/uefa.png" alt="Logo 3" width="150px" height="150px">
+          </a>
+        </center>
+      </div>
+      <div class="col-12 mt-4"> <!-- Added div -->
+        <center> <p style="color: aliceblue;">bản quyền thuộc nhóm ngã ngơ</p> </center>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</div>
+
+
+
+
+
+<script>
+var toggleSidebarBtn = document.getElementById("toggleSidebarBtn");
+var sidebar = document.getElementById("sidebar");
+var content = document.querySelector(".content");
+
+toggleSidebarBtn.addEventListener("click", function () {
+    if (window.innerWidth > 1000) {
+        sidebar.classList.toggle("active");
+        content.classList.toggle("active");
+    } else {
+        sidebar.classList.toggle("active2");
+    }
+});
+
+window.addEventListener("resize", function () {
+   
+        sidebar.classList.remove("active2");
+  
+        sidebar.classList.remove("active");
+        content.classList.remove("active");
+ 
+});
+</script>
+<script>
+
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
